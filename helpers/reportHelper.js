@@ -448,17 +448,46 @@ getRevenueAggregateByHourOrDate() {
                 const totalByDateHour =  current.Total.val;
                 var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],totalByDateHour)
                 this.applyAggregate(aggregateRevenue[key].Total.val, agg);
+
+                baseDayHourly[key].Total.items.forEach((adUnitRev)=>{
+                    this.initAdUnit(aggregateRevenue[key].Total.items,adUnitRev.uid);
+                    var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitRev)
+                    this.applyAggregate(aggregateRevenue[key].Total.items[adUnitRev.uid], agg);
+                })
+
             }else{
 
                 const totalByDateHourContext = current[context].Total.val;
                 var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],totalByDateHourContext)
                 this.applyAggregate(aggregateRevenue[key][context].Total.val, agg);
 
+
+                baseDayHourly[key][context].Total.items.forEach((adUnitRevContext)=>{
+                    this.initAdUnit(aggregateRevenue[key][context].Total.items,adUnitRevContext.uid);
+                    var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitRevContext)
+                    this.applyAggregate(aggregateRevenue[key][context].Total.items[adUnitRevContext.uid], agg);
+
+                })
+
+                
                 Object.keys(current[context]).forEach((contextType)=>{
-                    
                     const totalByDateHourContextType = current[context][contextType].val;
                     var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],totalByDateHourContextType)
                     this.applyAggregate(aggregateRevenue[key][context][contextType].val, agg);
+                })
+
+                Object.keys(baseDayHourly[key][context]).forEach((contextType)=>{
+                    if(contextType == 'Total'){
+                        console.log("--")
+                    }else{
+                        baseDayHourly[key][context][contextType].items.forEach((adUnitRevContextType)=>{
+                            this.initAdUnit(aggregateRevenue[key][context][contextType].items,adUnitRevContextType.uid);
+                            var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitRevContextType)
+                            this.applyAggregate(aggregateRevenue[key][context][contextType].items[adUnitRevContextType.uid], agg);
+                        })
+
+                        
+                    }
                 })
 
             }
