@@ -446,9 +446,20 @@ getRevenueAggregateTotal(){
 
 }
 
-getRevenueAggregateByHourOrDate(){
+getRevenueAggregateByHourOrDate() {
 
-    return {}
+    var baseDayHourly = this.aggregate().byHourDate;
+
+    const aggregateRevenue = {};
+
+    Object.keys(baseDayHourly).forEach((key)=>{
+        aggregateRevenue[key] = this.aggregateAdUnitObjectRevenue();
+    })
+
+    
+
+
+    return aggregateRevenue;
 }
 
 

@@ -7,7 +7,7 @@ const fs= require("fs");
 
 const ReportAggregatorBase = require("./helpers/reportHelper");
 
-const ReportingHelper = new ReportAggregatorBase(dailyData);
+const ReportingHelper = new ReportAggregatorBase(data);
 
 // var res = ReportingHelper.aggregateRawTotalsByAdUnit();
 

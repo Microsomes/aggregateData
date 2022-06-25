@@ -1,1 +1,1826 @@
-{}
+{
+  "0": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "1": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "2": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "3": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "4": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "5": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "6": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "7": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "8": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "9": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "10": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "11": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "12": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "13": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "14": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "15": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "16": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "17": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "18": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "19": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "20": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "21": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "22": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  },
+  "23": {
+    "WEB": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "AMP": {
+      "Total": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "DISPLAY": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      },
+      "VIDEO": {
+        "val": {
+          "grvRevenue": 0,
+          "googleRevenue": 0,
+          "grvDirectRevenue": 0,
+          "totalRevenue": 0,
+          "totalRevenueWithoutGRV": 0
+        },
+        "items": {}
+      }
+    },
+    "Total": {
+      "val": {
+        "grvRevenue": 0,
+        "googleRevenue": 0,
+        "grvDirectRevenue": 0,
+        "totalRevenue": 0,
+        "totalRevenueWithoutGRV": 0
+      },
+      "items": {}
+    }
+  }
+}
