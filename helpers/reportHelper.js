@@ -294,6 +294,7 @@ aggregateAdUnitObjectRevenue() {
 }
 
 getRevenueTotals(keys,data){
+
     var total = 0;
 
     keys.forEach((key)=>{
@@ -306,39 +307,57 @@ getRevenueTotals(keys,data){
 
 }
 
+grvRevenueKeys = [
+    'prop_programmatic_revenue',
+    'prop_programmatic_high_value_revenue'
+]
+
+googleRevenueKeys = [
+    'google_revenue'
+]
+
+grvDirectRevenueKeys = [
+    'prop_direct_revenue'
+]
+
+totalRevenueKeys = [
+    'prop_programmatic_revenue',
+    'prop_programmatic_high_value_revenue',
+    'prop_direct_revenue',
+    'google_revenue'
+]
+
+aggregateHelper = (keys,dataSource) => {
+    var totals = {};
+    keys.forEach((key)=> {
+        var methodName = key+"Keys";
+        var keys = eval(this[methodName])
+        totals[key] = this.getRevenueTotals(keys,dataSource)
+
+    })
+    return totals;
+}
+
+applyAggregate = (source,data) => {
+    Object.keys(data).forEach((key)=>{
+        const val = data[key];
+        source[key] = val;
+    })
+}
+
 getRevenueAggregateTotal(){
     var baseDataTotal = this.aggregate().byTotal
     const aggregateRevenue = this.aggregateAdUnitObjectRevenue();
 
-    const grvRevenueKeys = [
-        'prop_programmatic_revenue',
-        'prop_programmatic_high_value_revenue'
-    ]
-
-    const gogoleRevenueKeys = [
-        'google_revenue'
-    ]
-
-    const directRevenueKeys = [
-        'prop_direct_revenue'
-    ]
-
-    const totalEstRevKeys = [
-        'prop_programmatic_revenue',
-        'prop_programmatic_high_value_revenue',
-        'prop_direct_revenue',
-        'google_revenue'
-    ]
-  
     Object.keys(baseDataTotal).forEach((context)=>{
         
         if(context === 'Total'){
             const totalRev = baseDataTotal.Total.val;        
         
-            aggregateRevenue['Total'].val.grvRevenue = this.getRevenueTotals(grvRevenueKeys, totalRev);
-            aggregateRevenue['Total'].val.googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, totalRev);;
-            aggregateRevenue['Total'].val.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, totalRev);
-            aggregateRevenue['Total'].val.totalRevenue = this.getRevenueTotals(totalEstRevKeys, totalRev);;
+            aggregateRevenue['Total'].val.grvRevenue = this.getRevenueTotals(this.grvRevenueKeys, totalRev);
+            aggregateRevenue['Total'].val.googleRevenue = this.getRevenueTotals(this.googleRevenueKeys, totalRev);
+            aggregateRevenue['Total'].val.grvDirectRevenue = this.getRevenueTotals(this.grvDirectRevenueKeys, totalRev);
+            aggregateRevenue['Total'].val.totalRevenue = this.getRevenueTotals(this.totalRevenueKeys, totalRev);
         
             
             baseDataTotal.Total.items.forEach((adUnitRev)=>{
@@ -355,10 +374,10 @@ getRevenueAggregateTotal(){
                     }
                 }
 
-                aggregateRevenue['Total'].items[adUnitRev.uid].grvRevenue = this.getRevenueTotals(grvRevenueKeys, adUnitRev)
-                aggregateRevenue['Total'].items[adUnitRev.uid].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, adUnitRev)
-                aggregateRevenue['Total'].items[adUnitRev.uid].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, adUnitRev)
-                aggregateRevenue['Total'].items[adUnitRev.uid].totalRevenue = this.getRevenueTotals(totalEstRevKeys, adUnitRev)
+                aggregateRevenue['Total'].items[adUnitRev.uid].grvRevenue = this.getRevenueTotals(this.grvRevenueKeys, adUnitRev)
+                aggregateRevenue['Total'].items[adUnitRev.uid].googleRevenue = this.getRevenueTotals(this.googleRevenueKeys, adUnitRev)
+                aggregateRevenue['Total'].items[adUnitRev.uid].grvDirectRevenue = this.getRevenueTotals(this.grvDirectRevenueKeys, adUnitRev)
+                aggregateRevenue['Total'].items[adUnitRev.uid].totalRevenue = this.getRevenueTotals(this.totalRevenueKeys, adUnitRev)
 
             })
 
@@ -371,10 +390,10 @@ getRevenueAggregateTotal(){
 
                     const contextRevTotal = baseDataTotal[context].Total.val;
 
-                    aggregateRevenue[context].Total.val.grvRevenue = this.getRevenueTotals(grvRevenueKeys, contextRevTotal)
-                    aggregateRevenue[context].Total.val.googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, contextRevTotal)
-                    aggregateRevenue[context].Total.val.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTotal)
-                    aggregateRevenue[context].Total.val.totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.val.grvRevenue = this.getRevenueTotals(this.grvRevenueKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.val.googleRevenue = this.getRevenueTotals(this.googleRevenueKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.val.grvDirectRevenue = this.getRevenueTotals(this.grvDirectRevenueKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.val.totalRevenue = this.getRevenueTotals(this.totalRevenueKeys, contextRevTotal)
 
 
                     baseDataTotal[context].Total.items.forEach((adUnitContextRev)=>{
@@ -391,10 +410,10 @@ getRevenueAggregateTotal(){
                             }
                         }
 
-                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].grvRevenue = this.getRevenueTotals(grvRevenueKeys, adUnitContextRev)
-                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, adUnitContextRev)
-                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, adUnitContextRev)
-                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].totalRevenue = this.getRevenueTotals(totalEstRevKeys, adUnitContextRev)
+                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].grvRevenue = this.getRevenueTotals(this.grvRevenueKeys, adUnitContextRev)
+                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].googleRevenue = this.getRevenueTotals(this.googleRevenueKeys, adUnitContextRev)
+                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].grvDirectRevenue = this.getRevenueTotals(this.grvDirectRevenueKeys, adUnitContextRev)
+                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].totalRevenue = this.getRevenueTotals(this.totalRevenueKeys, adUnitContextRev)
         
                     })
 
@@ -403,10 +422,10 @@ getRevenueAggregateTotal(){
 
                     const contextRevTypeTotal = baseDataTotal[context][contextType].val;
 
-                    aggregateRevenue[context][contextType].val.grvRevenue = this.getRevenueTotals(grvRevenueKeys, contextRevTypeTotal)
-                    aggregateRevenue[context][contextType].val.googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, contextRevTypeTotal)
-                    aggregateRevenue[context][contextType].val.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTypeTotal)
-                    aggregateRevenue[context][contextType].val.totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].val.grvRevenue = this.getRevenueTotals(this.grvRevenueKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].val.googleRevenue = this.getRevenueTotals(this.googleRevenueKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].val.grvDirectRevenue = this.getRevenueTotals(this.grvDirectRevenueKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].val.totalRevenue = this.getRevenueTotals(this.totalRevenueKeys, contextRevTypeTotal)
 
 
                     baseDataTotal[context][contextType].items.forEach((adUnitContextTypeRev)=>{
@@ -423,11 +442,9 @@ getRevenueAggregateTotal(){
                             }
                         }
 
-                        aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid].grvRevenue = this.getRevenueTotals(grvRevenueKeys, adUnitContextTypeRev)
-                        aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, adUnitContextTypeRev)
-                        aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, adUnitContextTypeRev)
-                        aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid].totalRevenue = this.getRevenueTotals(totalEstRevKeys, adUnitContextTypeRev)
-                       
+                        var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitContextTypeRev)
+
+                        this.applyAggregate(aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid], agg);
                     })
 
                 }
@@ -455,6 +472,19 @@ getRevenueAggregateByHourOrDate() {
     Object.keys(baseDayHourly).forEach((key)=>{
         aggregateRevenue[key] = this.aggregateAdUnitObjectRevenue();
     })
+
+
+    Object.keys(baseDayHourly).forEach((key)=>{
+        const current = baseDayHourly[key];
+        
+        const totalByDateHour =  current.Total.val;
+
+
+        aggregateRevenue[key].Total.val.grvRevenue = this.getRevenueTotals(this.grvRevenueKeys, totalByDateHour)
+
+    })
+
+
 
     
 
