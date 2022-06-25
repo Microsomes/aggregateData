@@ -1,0 +1,55 @@
+{
+  "WEB": {
+    "Total": {
+      "grvRevenue": 175.56,
+      "googleRevenue": 143.24,
+      "grvDirectRevenue": 0,
+      "totalRevenue": 318.8,
+      "totalRevenueWithoutGRV": 0
+    },
+    "DISPLAY": {
+      "grvRevenue": 173.36,
+      "googleRevenue": 141.85,
+      "grvDirectRevenue": 0,
+      "totalRevenue": 315.21,
+      "totalRevenueWithoutGRV": 0
+    },
+    "VIDEO": {
+      "grvRevenue": 2.21,
+      "googleRevenue": 1.39,
+      "grvDirectRevenue": 0,
+      "totalRevenue": 3.6,
+      "totalRevenueWithoutGRV": 0
+    }
+  },
+  "AMP": {
+    "Total": {
+      "grvRevenue": 50.79,
+      "googleRevenue": 74.21,
+      "grvDirectRevenue": 0,
+      "totalRevenue": 125,
+      "totalRevenueWithoutGRV": 0
+    },
+    "DISPLAY": {
+      "grvRevenue": 50.04,
+      "googleRevenue": 71.69,
+      "grvDirectRevenue": 0,
+      "totalRevenue": 121.73,
+      "totalRevenueWithoutGRV": 0
+    },
+    "VIDEO": {
+      "grvRevenue": 0.76,
+      "googleRevenue": 2.52,
+      "grvDirectRevenue": 0,
+      "totalRevenue": 3.28,
+      "totalRevenueWithoutGRV": 0
+    }
+  },
+  "Total": {
+    "grvRevenue": 226.36,
+    "googleRevenue": 217.45,
+    "grvDirectRevenue": 0,
+    "totalRevenue": 443.81,
+    "totalRevenueWithoutGRV": 0
+  }
+}

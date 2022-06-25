@@ -311,16 +311,13 @@ getRevenueDataHourlyOrDay(){
         'prop_direct_revenue',
         'google_revenue'
     ]
-
-
-
-    
+  
     Object.keys(baseDataTotal).forEach((context)=>{
         
         if(context === 'Total'){
             const totalRev = baseDataTotal.Total.val;        
         
-            aggregateRevenue['Total'].grvRevenue = this.getRevenueTotals(grvRevenueKeys, totalRev);;
+            aggregateRevenue['Total'].grvRevenue = this.getRevenueTotals(grvRevenueKeys, totalRev);
             aggregateRevenue['Total'].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, totalRev);;
             aggregateRevenue['Total'].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, totalRev);
             aggregateRevenue['Total'].totalRevenue = this.getRevenueTotals(totalEstRevKeys, totalRev);;
@@ -331,18 +328,33 @@ getRevenueDataHourlyOrDay(){
                 
                 if(contextType === 'Total') {
 
-                    const contextRevTotal = baseDataTotal[context][contextType].val;
+                    const contextRevTotal = baseDataTotal[context].Total.val;
 
-                    console.log(contextRevTotal.prop_programmatic_revenue)
+                    aggregateRevenue[context].Total.grvRevenue = this.getRevenueTotals(grvRevenueKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTotal)
 
-                    // console.log(aggregateRevenue[context][contextType]);
+                }else{
+
+                    const contextRevTypeTotal = baseDataTotal[context][contextType].val;
+
+                    aggregateRevenue[context][contextType].grvRevenue = this.getRevenueTotals(grvRevenueKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTypeTotal)
+
                 }
+
+
 
             })
 
         }
 
     })
+
+    return aggregateRevenue;
 
     // console.log(aggregateRevenue);
 

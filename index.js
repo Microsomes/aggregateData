@@ -16,5 +16,5 @@ const ReportingHelper = new ReportAggregatorBase(data);
 
 var res2= ReportingHelper.getRevenueDataHourlyOrDay()
 
-// fs.writeFileSync("adunits2.json",JSON.stringify(res2,null,2),(err)=>{})
+fs.writeFileSync("revenue.json",JSON.stringify(res2,null,2),(err)=>{})
 
