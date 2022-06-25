@@ -66,6 +66,10 @@ class ReportAggregatorBase {
     return didFind.toUpperCase();
 }
 
+getAdUnitById(id) {
+    return this.data.ad_units.items.find((item)=> item.id == id);
+}
+
 getGaTotals(gaItems) {
     var total = this.gaObject();
 
@@ -114,6 +118,8 @@ aggregateRawTotalsByAdUnit() {
         const context = this.getContextByUnitId(adUnitId);
         const type = this.getTypeByUnitId(adUnitId);
         const current = this.data.totals.rollup.ad_unit_id[adUnitId];
+
+        current.uid = adUnitId;
 
         //work out the total 
         aggregate['Total'].items.push(current);
@@ -203,7 +209,11 @@ aggregateRawTotalsByAdUnitHourOrDate(){
 
             const currentHour = this.data.report[reportUnitId][key];
 
+            currentHour.uid = reportUnitId;
+            
+
             aggregate[key].Total.items.push(currentHour);
+
             aggregate[key].Total.val = this.getTotals(aggregate[key].Total.items);
 
             aggregate[key][context].Total.items.push(currentHour);
@@ -249,18 +259,27 @@ aggregateAdUnitObjectRevenue() {
     var aggregate = {};
     Object.keys(this.data.ad_units.by_context).forEach((context)=>{
         aggregate[context] = {
-            Total:this.aggregatedRevenueItem()
+            Total:{
+                val:this.aggregatedRevenueItem(),
+                items:{}
+            }
         }
     })
     
-    aggregate["Total"] = this.aggregatedRevenueItem()
+    aggregate["Total"] = {
+        val:this.aggregatedRevenueItem(),
+        items:{}
+    }
 
     Object.keys(this.data.ad_units.by_type).forEach((contextType)=>{
         this.data.ad_units.by_type[contextType].forEach((unitId)=>{     
             var context = this.getContextByUnitId(unitId);
             const contextTypeUpped = contextType.toUpperCase();        
             if(aggregate[context][contextTypeUpped] === undefined){
-                aggregate[context][contextTypeUpped] = this.aggregatedRevenueItem()
+                aggregate[context][contextTypeUpped] = {
+                    val:this.aggregatedRevenueItem(),
+                    items:{}
+                }
             }
         })
     })
@@ -317,12 +336,33 @@ getRevenueDataHourlyOrDay(){
         if(context === 'Total'){
             const totalRev = baseDataTotal.Total.val;        
         
-            aggregateRevenue['Total'].grvRevenue = this.getRevenueTotals(grvRevenueKeys, totalRev);
-            aggregateRevenue['Total'].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, totalRev);;
-            aggregateRevenue['Total'].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, totalRev);
-            aggregateRevenue['Total'].totalRevenue = this.getRevenueTotals(totalEstRevKeys, totalRev);;
+            aggregateRevenue['Total'].val.grvRevenue = this.getRevenueTotals(grvRevenueKeys, totalRev);
+            aggregateRevenue['Total'].val.googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, totalRev);;
+            aggregateRevenue['Total'].val.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, totalRev);
+            aggregateRevenue['Total'].val.totalRevenue = this.getRevenueTotals(totalEstRevKeys, totalRev);;
         
-        }else{
+            
+            baseDataTotal.Total.items.forEach((adUnitRev)=>{
+
+                const adUnit = this.getAdUnitById(adUnitRev.uid);
+
+
+                if(aggregateRevenue['Total'].items[adUnitRev.uid] === undefined){
+                    aggregateRevenue['Total'].items[adUnitRev.uid] = {
+                        name:adUnit.name,
+                        context: this.getContextByUnitId(adUnitRev.uid),
+                        contextType: this.getTypeByUnitId(adUnitRev.uid),
+                        rawUnit: adUnit,
+                        ...this.aggregatedRevenueItem()
+                    }
+                }
+
+                aggregateRevenue['Total'].items[adUnitRev.uid].grvRevenue = this.getRevenueTotals(grvRevenueKeys, adUnitRev)
+
+            })
+
+                
+        } else{
 
             Object.keys(baseDataTotal[context]).forEach((contextType)=>{
                 
@@ -330,19 +370,19 @@ getRevenueDataHourlyOrDay(){
 
                     const contextRevTotal = baseDataTotal[context].Total.val;
 
-                    aggregateRevenue[context].Total.grvRevenue = this.getRevenueTotals(grvRevenueKeys, contextRevTotal)
-                    aggregateRevenue[context].Total.googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, contextRevTotal)
-                    aggregateRevenue[context].Total.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTotal)
-                    aggregateRevenue[context].Total.totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.val.grvRevenue = this.getRevenueTotals(grvRevenueKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.val.googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.val.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTotal)
+                    aggregateRevenue[context].Total.val.totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTotal)
 
                 }else{
 
                     const contextRevTypeTotal = baseDataTotal[context][contextType].val;
 
-                    aggregateRevenue[context][contextType].grvRevenue = this.getRevenueTotals(grvRevenueKeys, contextRevTypeTotal)
-                    aggregateRevenue[context][contextType].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, contextRevTypeTotal)
-                    aggregateRevenue[context][contextType].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTypeTotal)
-                    aggregateRevenue[context][contextType].totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].val.grvRevenue = this.getRevenueTotals(grvRevenueKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].val.googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].val.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTypeTotal)
+                    aggregateRevenue[context][contextType].val.totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTypeTotal)
 
                 }
 
