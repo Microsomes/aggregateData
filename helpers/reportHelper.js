@@ -306,8 +306,7 @@ getRevenueTotals(keys,data){
 
 }
 
-getRevenueDataHourlyOrDay(){
-    var baseData = this.aggregate().byHourDate
+getRevenueAggregateTotal(){
     var baseDataTotal = this.aggregate().byTotal
     const aggregateRevenue = this.aggregateAdUnitObjectRevenue();
 
@@ -346,7 +345,6 @@ getRevenueDataHourlyOrDay(){
 
                 const adUnit = this.getAdUnitById(adUnitRev.uid);
 
-
                 if(aggregateRevenue['Total'].items[adUnitRev.uid] === undefined){
                     aggregateRevenue['Total'].items[adUnitRev.uid] = {
                         name:adUnit.name,
@@ -358,6 +356,9 @@ getRevenueDataHourlyOrDay(){
                 }
 
                 aggregateRevenue['Total'].items[adUnitRev.uid].grvRevenue = this.getRevenueTotals(grvRevenueKeys, adUnitRev)
+                aggregateRevenue['Total'].items[adUnitRev.uid].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, adUnitRev)
+                aggregateRevenue['Total'].items[adUnitRev.uid].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, adUnitRev)
+                aggregateRevenue['Total'].items[adUnitRev.uid].totalRevenue = this.getRevenueTotals(totalEstRevKeys, adUnitRev)
 
             })
 
@@ -375,6 +376,29 @@ getRevenueDataHourlyOrDay(){
                     aggregateRevenue[context].Total.val.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTotal)
                     aggregateRevenue[context].Total.val.totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTotal)
 
+
+                    baseDataTotal[context].Total.items.forEach((adUnitContextRev)=>{
+                        
+                        const adUnit = this.getAdUnitById(adUnitContextRev.uid);
+        
+                        if(aggregateRevenue[context].Total.items[adUnitContextRev.uid] === undefined){
+                            aggregateRevenue[context].Total.items[adUnitContextRev.uid] = {
+                                name:adUnit.name,
+                                context: this.getContextByUnitId(adUnitContextRev.uid),
+                                contextType: this.getTypeByUnitId(adUnitContextRev.uid),
+                                rawUnit: adUnit,
+                                ...this.aggregatedRevenueItem()
+                            }
+                        }
+
+                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].grvRevenue = this.getRevenueTotals(grvRevenueKeys, adUnitContextRev)
+                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, adUnitContextRev)
+                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, adUnitContextRev)
+                        aggregateRevenue[context].Total.items[adUnitContextRev.uid].totalRevenue = this.getRevenueTotals(totalEstRevKeys, adUnitContextRev)
+        
+                    })
+
+
                 }else{
 
                     const contextRevTypeTotal = baseDataTotal[context][contextType].val;
@@ -383,6 +407,28 @@ getRevenueDataHourlyOrDay(){
                     aggregateRevenue[context][contextType].val.googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, contextRevTypeTotal)
                     aggregateRevenue[context][contextType].val.grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, contextRevTypeTotal)
                     aggregateRevenue[context][contextType].val.totalRevenue = this.getRevenueTotals(totalEstRevKeys, contextRevTypeTotal)
+
+
+                    baseDataTotal[context][contextType].items.forEach((adUnitContextTypeRev)=>{
+                        
+                        const adUnit = this.getAdUnitById(adUnitContextTypeRev.uid);
+        
+                        if(aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid] === undefined){
+                            aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid] = {
+                                name:adUnit.name,
+                                context: this.getContextByUnitId(adUnitContextTypeRev.uid),
+                                contextType: this.getTypeByUnitId(adUnitContextTypeRev.uid),
+                                rawUnit: adUnit,
+                                ...this.aggregatedRevenueItem()
+                            }
+                        }
+
+                        aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid].grvRevenue = this.getRevenueTotals(grvRevenueKeys, adUnitContextTypeRev)
+                        aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid].googleRevenue = this.getRevenueTotals(gogoleRevenueKeys, adUnitContextTypeRev)
+                        aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid].grvDirectRevenue = this.getRevenueTotals(directRevenueKeys, adUnitContextTypeRev)
+                        aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid].totalRevenue = this.getRevenueTotals(totalEstRevKeys, adUnitContextTypeRev)
+                       
+                    })
 
                 }
 
@@ -400,6 +446,10 @@ getRevenueDataHourlyOrDay(){
 
 }
 
+getRevenueAggregateByHourOrDate(){
+
+    return {}
+}
 
 
 
