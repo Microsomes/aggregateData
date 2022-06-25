@@ -2,10 +2,10 @@
   "WEB": {
     "Total": {
       "val": {
-        "grvRevenue": 175.56,
+        "grvRevenue": 175.55,
         "googleRevenue": 143.24,
         "grvDirectRevenue": 0,
-        "totalRevenue": 318.8,
+        "totalRevenue": 318.78,
         "totalRevenueWithoutGRV": 0
       },
       "items": {
@@ -25,10 +25,10 @@
             "updated_at": "2020-09-14T12:24:33.000000Z",
             "removed_at": null
           },
-          "grvRevenue": 66.25,
+          "grvRevenue": 66.23,
           "googleRevenue": 48.5,
           "grvDirectRevenue": 0,
-          "totalRevenue": 114.75,
+          "totalRevenue": 114.74,
           "totalRevenueWithoutGRV": 0
         },
         "74": {
@@ -145,10 +145,10 @@
     },
     "DISPLAY": {
       "val": {
-        "grvRevenue": 173.36,
+        "grvRevenue": 173.34,
         "googleRevenue": 141.85,
         "grvDirectRevenue": 0,
-        "totalRevenue": 315.21,
+        "totalRevenue": 315.19,
         "totalRevenueWithoutGRV": 0
       },
       "items": {
@@ -168,10 +168,10 @@
             "updated_at": "2020-09-14T12:24:33.000000Z",
             "removed_at": null
           },
-          "grvRevenue": 66.25,
+          "grvRevenue": 66.23,
           "googleRevenue": 48.5,
           "grvDirectRevenue": 0,
-          "totalRevenue": 114.75,
+          "totalRevenue": 114.74,
           "totalRevenueWithoutGRV": 0
         },
         "74": {
@@ -555,10 +555,10 @@
   },
   "Total": {
     "val": {
-      "grvRevenue": 226.36,
+      "grvRevenue": 226.34,
       "googleRevenue": 217.45,
       "grvDirectRevenue": 0,
-      "totalRevenue": 443.81,
+      "totalRevenue": 443.79,
       "totalRevenueWithoutGRV": 0
     },
     "items": {
@@ -578,10 +578,10 @@
           "updated_at": "2020-09-14T12:24:33.000000Z",
           "removed_at": null
         },
-        "grvRevenue": 66.25,
+        "grvRevenue": 66.23,
         "googleRevenue": 48.5,
         "grvDirectRevenue": 0,
-        "totalRevenue": 114.75,
+        "totalRevenue": 114.74,
         "totalRevenueWithoutGRV": 0
       },
       "74": {
