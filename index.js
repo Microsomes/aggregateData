@@ -1,7 +1,20 @@
 const data = require('./data.json');
 
-const ReportHelper = require("./helpers/reportHelper");
+const dailyData = require("./exmpledata/dailyData.json");
 
-const ReportingHelper = new ReportHelper(data);
+const fs= require("fs");
 
-ReportingHelper.aggregateRawByAdUnit();
+
+const ReportAggregatorBase = require("./helpers/reportHelper");
+
+const ReportingHelper = new ReportAggregatorBase(data);
+
+// var res = ReportingHelper.aggregateRawTotalsByAdUnit();
+
+// // console.log(res);
+
+
+var res2= ReportingHelper.getRevenueDataHourlyOrDay()
+
+// fs.writeFileSync("adunits2.json",JSON.stringify(res2,null,2),(err)=>{})
+

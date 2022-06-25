@@ -1,0 +1,97 @@
+{
+  "WEB": {
+    "Total": {
+      "prop_programmatic_impressions": 0,
+      "prop_programmatic_revenue": 0,
+      "prop_programmatic_high_value_impressions": 0,
+      "prop_programmatic_high_value_revenue": 0,
+      "prop_direct_impressions": 0,
+      "prop_direct_revenue": 0,
+      "google_impressions": 0,
+      "google_revenue": 0,
+      "unfilled_requests": 0,
+      "total_impressions": 0,
+      "total_revenue": 0
+    },
+    "DISPLAY": {
+      "prop_programmatic_impressions": 0,
+      "prop_programmatic_revenue": 0,
+      "prop_programmatic_high_value_impressions": 0,
+      "prop_programmatic_high_value_revenue": 0,
+      "prop_direct_impressions": 0,
+      "prop_direct_revenue": 0,
+      "google_impressions": 0,
+      "google_revenue": 0,
+      "unfilled_requests": 0,
+      "total_impressions": 0,
+      "total_revenue": 0
+    },
+    "VIDEO": {
+      "prop_programmatic_impressions": 0,
+      "prop_programmatic_revenue": 0,
+      "prop_programmatic_high_value_impressions": 0,
+      "prop_programmatic_high_value_revenue": 0,
+      "prop_direct_impressions": 0,
+      "prop_direct_revenue": 0,
+      "google_impressions": 0,
+      "google_revenue": 0,
+      "unfilled_requests": 0,
+      "total_impressions": 0,
+      "total_revenue": 0
+    }
+  },
+  "AMP": {
+    "Total": {
+      "prop_programmatic_impressions": 0,
+      "prop_programmatic_revenue": 0,
+      "prop_programmatic_high_value_impressions": 0,
+      "prop_programmatic_high_value_revenue": 0,
+      "prop_direct_impressions": 0,
+      "prop_direct_revenue": 0,
+      "google_impressions": 0,
+      "google_revenue": 0,
+      "unfilled_requests": 0,
+      "total_impressions": 0,
+      "total_revenue": 0
+    },
+    "DISPLAY": {
+      "prop_programmatic_impressions": 0,
+      "prop_programmatic_revenue": 0,
+      "prop_programmatic_high_value_impressions": 0,
+      "prop_programmatic_high_value_revenue": 0,
+      "prop_direct_impressions": 0,
+      "prop_direct_revenue": 0,
+      "google_impressions": 0,
+      "google_revenue": 0,
+      "unfilled_requests": 0,
+      "total_impressions": 0,
+      "total_revenue": 0
+    },
+    "VIDEO": {
+      "prop_programmatic_impressions": 0,
+      "prop_programmatic_revenue": 0,
+      "prop_programmatic_high_value_impressions": 0,
+      "prop_programmatic_high_value_revenue": 0,
+      "prop_direct_impressions": 0,
+      "prop_direct_revenue": 0,
+      "google_impressions": 0,
+      "google_revenue": 0,
+      "unfilled_requests": 0,
+      "total_impressions": 0,
+      "total_revenue": 0
+    }
+  },
+  "Total": {
+    "prop_programmatic_impressions": 0,
+    "prop_programmatic_revenue": 0,
+    "prop_programmatic_high_value_impressions": 0,
+    "prop_programmatic_high_value_revenue": 0,
+    "prop_direct_impressions": 0,
+    "prop_direct_revenue": 0,
+    "google_impressions": 0,
+    "google_revenue": 0,
+    "unfilled_requests": 0,
+    "total_impressions": 0,
+    "total_revenue": 0
+  }
+}
