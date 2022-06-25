@@ -255,19 +255,19 @@ aggregate(){
     }
 }
 
-aggregateAdUnitObjectRevenue() {
+aggregateAdUnitObjectGeneric(valObj) {
     var aggregate = {};
     Object.keys(this.data.ad_units.by_context).forEach((context)=>{
         aggregate[context] = {
             Total:{
-                val:this.aggregatedRevenueItem(),
+                val:valObj,
                 items:{}
             }
         }
     })
     
     aggregate["Total"] = {
-        val:this.aggregatedRevenueItem(),
+        val:valObj,
         items:{}
     }
 
@@ -277,7 +277,7 @@ aggregateAdUnitObjectRevenue() {
             const contextTypeUpped = contextType.toUpperCase();        
             if(aggregate[context][contextTypeUpped] === undefined){
                 aggregate[context][contextTypeUpped] = {
-                    val:this.aggregatedRevenueItem(),
+                    val:valObj,
                     items:{}
                 }
             }
@@ -361,7 +361,7 @@ initAdUnit = (source,adUnitId) =>{
 
 getRevenueAggregateTotal(){
     var baseDataTotal = this.aggregate().byTotal
-    const aggregateRevenue = this.aggregateAdUnitObjectRevenue();
+    const aggregateRevenue = this.aggregateAdUnitObjectGeneric(this.aggregatedRevenueItem());
 
     Object.keys(baseDataTotal).forEach((context)=>{
         
@@ -436,7 +436,7 @@ getRevenueAggregateByHourOrDate() {
     const aggregateRevenue = {};
 
     Object.keys(baseDayHourly).forEach((key)=>{
-        aggregateRevenue[key] = this.aggregateAdUnitObjectRevenue();
+        aggregateRevenue[key] = this.aggregateAdUnitObjectGeneric(this.aggregatedRevenueItem());
     })
 
 
@@ -478,7 +478,6 @@ getRevenueAggregateByHourOrDate() {
 
                 Object.keys(baseDayHourly[key][context]).forEach((contextType)=>{
                     if(contextType == 'Total'){
-                        console.log("--")
                     }else{
                         baseDayHourly[key][context][contextType].items.forEach((adUnitRevContextType)=>{
                             this.initAdUnit(aggregateRevenue[key][context][contextType].items,adUnitRevContextType.uid);
@@ -502,6 +501,13 @@ getRevenueAggregateByHourOrDate() {
 
 
     return aggregateRevenue;
+}
+
+revenueData() {
+    return {
+        Total: this.getRevenueAggregateTotal(),
+        HourlyOrDay: this.getRevenueAggregateByHourOrDate()
+    }
 }
 
 
