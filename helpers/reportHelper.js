@@ -345,6 +345,20 @@ applyAggregate = (source,data) => {
     })
 }
 
+initAdUnit = (source,adUnitId) =>{
+    const adUnit = this.getAdUnitById(adUnitId);
+    if(source[adUnitId] === undefined){
+        source[adUnitId] = {
+            name: adUnit.name,
+            context: this.getContextByUnitId(adUnitId),
+            contextType: this.getTypeByUnitId(adUnitId),
+            rawUnit: adUnit,
+            ...this.aggregatedRevenueItem()
+        }
+    }
+}
+
+
 getRevenueAggregateTotal(){
     var baseDataTotal = this.aggregate().byTotal
     const aggregateRevenue = this.aggregateAdUnitObjectRevenue();
@@ -358,18 +372,9 @@ getRevenueAggregateTotal(){
             this.applyAggregate(aggregateRevenue['Total'].val, agg);
     
             baseDataTotal.Total.items.forEach((adUnitRev)=>{
-
                 const adUnit = this.getAdUnitById(adUnitRev.uid);
 
-                if(aggregateRevenue['Total'].items[adUnitRev.uid] === undefined){
-                    aggregateRevenue['Total'].items[adUnitRev.uid] = {
-                        name:adUnit.name,
-                        context: this.getContextByUnitId(adUnitRev.uid),
-                        contextType: this.getTypeByUnitId(adUnitRev.uid),
-                        rawUnit: adUnit,
-                        ...this.aggregatedRevenueItem()
-                    }
-                }
+                this.initAdUnit(aggregateRevenue['Total'].items,adUnitRev.uid);
 
                 var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitRev)
                 this.applyAggregate(aggregateRevenue['Total'].items[adUnitRev.uid], agg);
@@ -391,15 +396,7 @@ getRevenueAggregateTotal(){
                         
                         const adUnit = this.getAdUnitById(adUnitContextRev.uid);
         
-                        if(aggregateRevenue[context].Total.items[adUnitContextRev.uid] === undefined){
-                            aggregateRevenue[context].Total.items[adUnitContextRev.uid] = {
-                                name:adUnit.name,
-                                context: this.getContextByUnitId(adUnitContextRev.uid),
-                                contextType: this.getTypeByUnitId(adUnitContextRev.uid),
-                                rawUnit: adUnit,
-                                ...this.aggregatedRevenueItem()
-                            }
-                        }
+                        this.initAdUnit(aggregateRevenue[context].Total.items,adUnitContextRev.uid);
 
                         var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitContextRev)
                         this.applyAggregate(aggregateRevenue[context].Total.items[adUnitContextRev.uid], agg);
@@ -418,16 +415,8 @@ getRevenueAggregateTotal(){
                         
                         const adUnit = this.getAdUnitById(adUnitContextTypeRev.uid);
         
-                        if(aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid] === undefined){
-                            aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid] = {
-                                name:adUnit.name,
-                                context: this.getContextByUnitId(adUnitContextTypeRev.uid),
-                                contextType: this.getTypeByUnitId(adUnitContextTypeRev.uid),
-                                rawUnit: adUnit,
-                                ...this.aggregatedRevenueItem()
-                            }
-                        }
-
+                        this.initAdUnit(aggregateRevenue[context][contextType].items,adUnitContextTypeRev.uid);
+                       
                         var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitContextTypeRev)
                         this.applyAggregate(aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid], agg);
                     })
@@ -441,8 +430,6 @@ getRevenueAggregateTotal(){
     })
 
     return aggregateRevenue;
-
-    // console.log(aggregateRevenue);
 
 }
 
@@ -460,10 +447,27 @@ getRevenueAggregateByHourOrDate() {
     Object.keys(baseDayHourly).forEach((key)=>{
         const current = baseDayHourly[key];
         
-        const totalByDateHour =  current.Total.val;
+        Object.keys(current).forEach((context)=>{
+            if(context == 'Total'){
+                const totalByDateHour =  current.Total.val;
+                var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],totalByDateHour)
+                this.applyAggregate(aggregateRevenue[key].Total.val, agg);
+            }else{
 
+                const totalByDateHourContext = current[context].Total.val;
+                var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],totalByDateHourContext)
+                this.applyAggregate(aggregateRevenue[key][context].Total.val, agg);
 
-        aggregateRevenue[key].Total.val.grvRevenue = this.getRevenueTotals(this.grvRevenueKeys, totalByDateHour)
+                Object.keys(current[context]).forEach((contextType)=>{
+                    
+                    const totalByDateHourContextType = current[context][contextType].val;
+                    var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],totalByDateHourContextType)
+                    this.applyAggregate(aggregateRevenue[key][context][contextType].val, agg);
+                })
+
+            }
+        })
+
 
     })
 
