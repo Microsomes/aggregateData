@@ -3,13 +3,13 @@
     "Total": {
       "val": {
         "totalImps": 60945,
-        "totalEcpm": 0,
+        "totalEcpm": 1.34,
         "grvImps": 19184,
-        "grvEcpm": 0,
+        "grvEcpm": 1.92,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
+        "grvDirectEcpm": null,
         "googleImps": 41761,
-        "googleEcpm": 0
+        "googleEcpm": 1.07
       },
       "items": {
         "73": {
@@ -29,13 +29,13 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         },
         "74": {
           "name": "Primary leaderboard",
@@ -54,13 +54,13 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         },
         "75": {
           "name": "Primary MPU",
@@ -79,13 +79,13 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         },
         "76": {
           "name": "In-Image",
@@ -104,13 +104,13 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         },
         "80": {
           "name": "Video Instream AP",
@@ -129,13 +129,13 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         },
         "81": {
           "name": "Video Instream CTP",
@@ -154,13 +154,13 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         }
       }
     },
@@ -347,13 +347,13 @@
     "Total": {
       "val": {
         "totalImps": 42732,
-        "totalEcpm": 0,
+        "totalEcpm": 1.44,
         "grvImps": 12865,
-        "grvEcpm": 0,
+        "grvEcpm": 1.96,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
+        "grvDirectEcpm": null,
         "googleImps": 29867,
-        "googleEcpm": 0
+        "googleEcpm": 1.21
       },
       "items": {
         "77": {
@@ -373,13 +373,13 @@
             "removed_at": null
           },
           "totalImps": 12972,
-          "totalEcpm": 0,
+          "totalEcpm": 1.22,
           "grvImps": 4357,
-          "grvEcpm": 0,
+          "grvEcpm": 1.53,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8615,
-          "googleEcpm": 0
+          "googleEcpm": 1.06
         },
         "78": {
           "name": "AMP MPU",
@@ -398,13 +398,13 @@
             "removed_at": null
           },
           "totalImps": 12972,
-          "totalEcpm": 0,
+          "totalEcpm": 1.22,
           "grvImps": 4357,
-          "grvEcpm": 0,
+          "grvEcpm": 1.53,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8615,
-          "googleEcpm": 0
+          "googleEcpm": 1.06
         },
         "79": {
           "name": "AMP Carpet MPU",
@@ -423,13 +423,13 @@
             "removed_at": null
           },
           "totalImps": 12972,
-          "totalEcpm": 0,
+          "totalEcpm": 1.22,
           "grvImps": 4357,
-          "grvEcpm": 0,
+          "grvEcpm": 1.53,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8615,
-          "googleEcpm": 0
+          "googleEcpm": 1.06
         },
         "84": {
           "name": "AMP Video Instream AP",
@@ -448,13 +448,13 @@
             "removed_at": null
           },
           "totalImps": 12972,
-          "totalEcpm": 0,
+          "totalEcpm": 1.22,
           "grvImps": 4357,
-          "grvEcpm": 0,
+          "grvEcpm": 1.53,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8615,
-          "googleEcpm": 0
+          "googleEcpm": 1.06
         },
         "786": {
           "name": "AMP In-Image",
@@ -473,13 +473,13 @@
             "removed_at": null
           },
           "totalImps": 12972,
-          "totalEcpm": 0,
+          "totalEcpm": 1.22,
           "grvImps": 4357,
-          "grvEcpm": 0,
+          "grvEcpm": 1.53,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8615,
-          "googleEcpm": 0
+          "googleEcpm": 1.06
         }
       }
     },
@@ -640,13 +640,13 @@
   "Total": {
     "val": {
       "totalImps": 103677,
-      "totalEcpm": 0,
+      "totalEcpm": 1.38,
       "grvImps": 32049,
-      "grvEcpm": 0,
+      "grvEcpm": 1.93,
       "grvDirectImps": 0,
-      "grvDirectEcpm": 0,
+      "grvDirectEcpm": null,
       "googleImps": 71628,
-      "googleEcpm": 0
+      "googleEcpm": 1.13
     },
     "items": {
       "73": {
@@ -666,13 +666,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "74": {
         "name": "Primary leaderboard",
@@ -691,13 +691,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "75": {
         "name": "Primary MPU",
@@ -716,13 +716,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "76": {
         "name": "In-Image",
@@ -741,13 +741,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "77": {
         "name": "AMP Leaderboard",
@@ -766,13 +766,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "78": {
         "name": "AMP MPU",
@@ -791,13 +791,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "79": {
         "name": "AMP Carpet MPU",
@@ -816,13 +816,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "80": {
         "name": "Video Instream AP",
@@ -841,13 +841,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "81": {
         "name": "Video Instream CTP",
@@ -866,13 +866,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "84": {
         "name": "AMP Video Instream AP",
@@ -891,13 +891,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       },
       "786": {
         "name": "AMP In-Image",
@@ -916,13 +916,13 @@
           "removed_at": null
         },
         "totalImps": 13437,
-        "totalEcpm": 0,
+        "totalEcpm": 2,
         "grvImps": 4873,
-        "grvEcpm": 0,
+        "grvEcpm": 2.5,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
-        "googleImps": 0,
-        "googleEcpm": 0
+        "grvDirectEcpm": null,
+        "googleImps": 8564,
+        "googleEcpm": 1.72
       }
     }
   }

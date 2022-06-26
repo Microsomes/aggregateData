@@ -529,13 +529,48 @@ grvImpressionKeys = [
     'prop_programmatic_impressions'
 ]
 
+grvRevenueKeys = [
+    'prop_programmatic_high_value_revenue',
+    'prop_direct_revenue',
+    'prop_programmatic_revenue'
+]
+
 grvDirectImpressionKeys = [
     'prop_direct_impressions',
+]
+
+grvDirectRevenueKeys = [
+    'prop_direct_revenue',
 ]
 
 googleImpressionKeys = [
     'google_impressions',
 ]
+
+googleRevenueKeys = [
+    'google_revenue'
+]
+
+getEcpm = (revenue,impressions)=>{;
+    return this.round((revenue/impressions) *1000,2);
+}
+
+aggregateeAdsItemProcess = (dataSource,dest) => {
+
+    dest.totalImps = dataSource.total_impressions
+    dest.totalEcpm = this.getEcpm(dataSource.total_revenue/1000000,dataSource.total_impressions)
+    
+    dest.grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, dataSource);
+    dest.grvEcpm = this.getEcpm(this.getAdsImpsTotals(this.grvRevenueKeys, dataSource)/1000000,dest.grvImps)
+
+    dest.grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, dataSource);
+    dest.grvDirectEcpm = this.getEcpm(this.getAdsImpsTotals(this.grvDirectRevenueKeys, dataSource)/1000000, dest.grvDirectImps)
+    
+    dest.googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, dataSource);
+    dest.googleEcpm = this.getEcpm(this.getAdsImpsTotals(this.googleRevenueKeys, dataSource)/1000000, dest.googleImps)
+
+
+    }
 
 getAdsAggregateTotal(){
     var baseDataTotal = this.aggregate().byTotal
@@ -543,32 +578,19 @@ getAdsAggregateTotal(){
     const aggregateAds = this.aggregateAdUnitObjectGeneric(this.aggregatedAdsItem);
 
     
-    
-
-
     Object.keys(baseDataTotal).forEach((context)=>{
         if(context === 'Total'){
             
             const totalC = baseDataTotal[context].val;
-            aggregateAds['Total'].val.totalImps = totalC.total_impressions
-            aggregateAds['Total'].val.grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalC);
-            aggregateAds['Total'].val.grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalC);
-            aggregateAds['Total'].val.googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalC);
+
+            this.aggregateeAdsItemProcess(totalC, aggregateAds['Total'].val);
+
 
             baseDataTotal.Total.items.forEach((item)=>{
 
                 this.initAdUnitGeneric(aggregateAds.Total.items, item.uid, this.aggregatedAdsItem);
-
                 const totalUnit = baseDataTotal.Total.items.find((item=> item.uid = item.uid));
-
-                aggregateAds.Total.items[item.uid].totalImps = totalUnit.total_impressions
-                aggregateAds.Total.items[item.uid].grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalUnit)
-                aggregateAds.Total.items[item.uid].totalImps = totalUnit.total_impressions
-                aggregateAds.Total.items[item.uid].totalImps = totalUnit.total_impressions
-                // aggregateAds[context].Total.items[item.uid].grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContextUnit);
-                // aggregateAds[context].Total.items[item.uid].grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContextUnit);
-                // aggregateAds[context].Total.items[item.uid].googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContextUnit);
-        
+                this.aggregateeAdsItemProcess(totalUnit,aggregateAds.Total.items[item.uid])
             })
 
         }else{
@@ -579,23 +601,14 @@ getAdsAggregateTotal(){
                 if(contextType === 'Total'){
                     const totalContext = baseDataTotal[context].Total.val;
 
-                    aggregateAds[context].Total.val.totalImps = totalContext.total_impressions
-                    aggregateAds[context].Total.val.grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContext);
-                    aggregateAds[context].Total.val.grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContext);
-                    aggregateAds[context].Total.val.googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContext);
-                
+                    this.aggregateeAdsItemProcess(totalContext,aggregateAds[context].Total.val );
 
                     baseDataTotal[context].Total.items.forEach((item)=>{
 
                         this.initAdUnitGeneric(aggregateAds[context].Total.items, item.uid, this.aggregatedAdsItem);
-
                         const totalContextUnit = baseDataTotal[context].Total.items.find((item=> item.uid = item.uid));
-
-                        aggregateAds[context].Total.items[item.uid].totalImps = totalContextUnit.total_impressions
-                        aggregateAds[context].Total.items[item.uid].grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContextUnit);
-                        aggregateAds[context].Total.items[item.uid].grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContextUnit);
-                        aggregateAds[context].Total.items[item.uid].googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContextUnit);
-                
+                        this.aggregateeAdsItemProcess(totalContextUnit, aggregateAds[context].Total.items[item.uid])
+                       
                     })
                     
 
