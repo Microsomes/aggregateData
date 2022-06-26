@@ -16,6 +16,19 @@ class ReportAggregatorBase {
         };
     }
 
+    aggregatedAdsItem() {
+        return {
+          totalImps: 0,
+          totalEcpm: 0,
+          grvImps: 0,
+          grvEcpm: 0,
+          grvDirectImps: 0,
+          grvDirectEcpm: 0,
+          googleImps: 0,
+          googleEcpm: 0
+        };
+    }
+
     revenueObject = () => {
         return {
             prop_programmatic_impressions: 0,
@@ -260,14 +273,14 @@ aggregateAdUnitObjectGeneric(valObj) {
     Object.keys(this.data.ad_units.by_context).forEach((context)=>{
         aggregate[context] = {
             Total:{
-                val:valObj,
+                val:valObj(),
                 items:{}
             }
         }
     })
     
     aggregate["Total"] = {
-        val:valObj,
+        val:valObj(),
         items:{}
     }
 
@@ -277,7 +290,7 @@ aggregateAdUnitObjectGeneric(valObj) {
             const contextTypeUpped = contextType.toUpperCase();        
             if(aggregate[context][contextTypeUpped] === undefined){
                 aggregate[context][contextTypeUpped] = {
-                    val:valObj,
+                    val:valObj(),
                     items:{}
                 }
             }
@@ -294,17 +307,13 @@ aggregateAdUnitObjectGeneric(valObj) {
 }
 
 getRevenueTotals(keys,data){
-
     var total = 0;
-
     keys.forEach((key)=>{
         const val = data[key];
         total += val;
     })
 
-
     return this.round((total/1000000),2)
-
 }
 
 grvRevenueKeys = [
@@ -345,7 +354,7 @@ applyAggregate = (source,data) => {
     })
 }
 
-initAdUnit = (source,adUnitId) =>{
+initAdUnitGeneric = (source,adUnitId, itemObj) =>{
     const adUnit = this.getAdUnitById(adUnitId);
     if(source[adUnitId] === undefined){
         source[adUnitId] = {
@@ -353,7 +362,7 @@ initAdUnit = (source,adUnitId) =>{
             context: this.getContextByUnitId(adUnitId),
             contextType: this.getTypeByUnitId(adUnitId),
             rawUnit: adUnit,
-            ...this.aggregatedRevenueItem()
+            ...itemObj()
         }
     }
 }
@@ -361,7 +370,7 @@ initAdUnit = (source,adUnitId) =>{
 
 getRevenueAggregateTotal(){
     var baseDataTotal = this.aggregate().byTotal
-    const aggregateRevenue = this.aggregateAdUnitObjectGeneric(this.aggregatedRevenueItem());
+    const aggregateRevenue = this.aggregateAdUnitObjectGeneric(this.aggregatedRevenueItem);
 
     Object.keys(baseDataTotal).forEach((context)=>{
         
@@ -374,7 +383,7 @@ getRevenueAggregateTotal(){
             baseDataTotal.Total.items.forEach((adUnitRev)=>{
                 const adUnit = this.getAdUnitById(adUnitRev.uid);
 
-                this.initAdUnit(aggregateRevenue['Total'].items,adUnitRev.uid);
+                this.initAdUnitGeneric(aggregateRevenue['Total'].items,adUnitRev.uid, this.aggregatedRevenueItem);
 
                 var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitRev)
                 this.applyAggregate(aggregateRevenue['Total'].items[adUnitRev.uid], agg);
@@ -394,7 +403,7 @@ getRevenueAggregateTotal(){
 
                     baseDataTotal[context].Total.items.forEach((adUnitContextRev)=>{
                                 
-                        this.initAdUnit(aggregateRevenue[context].Total.items,adUnitContextRev.uid);
+                        this.initAdUnitGeneric(aggregateRevenue[context].Total.items,adUnitContextRev.uid,this.aggregatedRevenueItem);
 
                         var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitContextRev)
                         this.applyAggregate(aggregateRevenue[context].Total.items[adUnitContextRev.uid], agg);
@@ -411,7 +420,7 @@ getRevenueAggregateTotal(){
 
                     baseDataTotal[context][contextType].items.forEach((adUnitContextTypeRev)=>{
                                 
-                        this.initAdUnit(aggregateRevenue[context][contextType].items,adUnitContextTypeRev.uid);
+                        this.initAdUnitGeneric(aggregateRevenue[context][contextType].items,adUnitContextTypeRev.uid,this.aggregatedRevenueItem);
                        
                         var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitContextTypeRev)
                         this.applyAggregate(aggregateRevenue[context][contextType].items[adUnitContextTypeRev.uid], agg);
@@ -436,7 +445,7 @@ getRevenueAggregateByHourOrDate() {
     const aggregateRevenue = {};
 
     Object.keys(baseDayHourly).forEach((key)=>{
-        aggregateRevenue[key] = this.aggregateAdUnitObjectGeneric(this.aggregatedRevenueItem());
+        aggregateRevenue[key] = this.aggregateAdUnitObjectGeneric(this.aggregatedRevenueItem);
     })
 
 
@@ -450,7 +459,7 @@ getRevenueAggregateByHourOrDate() {
                 this.applyAggregate(aggregateRevenue[key].Total.val, agg);
 
                 baseDayHourly[key].Total.items.forEach((adUnitRev)=>{
-                    this.initAdUnit(aggregateRevenue[key].Total.items,adUnitRev.uid);
+                    this.initAdUnitGeneric(aggregateRevenue[key].Total.items,adUnitRev.uid,this.aggregatedRevenueItem);
                     var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitRev)
                     this.applyAggregate(aggregateRevenue[key].Total.items[adUnitRev.uid], agg);
                 })
@@ -463,7 +472,7 @@ getRevenueAggregateByHourOrDate() {
 
 
                 baseDayHourly[key][context].Total.items.forEach((adUnitRevContext)=>{
-                    this.initAdUnit(aggregateRevenue[key][context].Total.items,adUnitRevContext.uid);
+                    this.initAdUnitGeneric(aggregateRevenue[key][context].Total.items,adUnitRevContext.uid,this.aggregatedRevenueItem);
                     var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitRevContext)
                     this.applyAggregate(aggregateRevenue[key][context].Total.items[adUnitRevContext.uid], agg);
 
@@ -480,7 +489,7 @@ getRevenueAggregateByHourOrDate() {
                     if(contextType == 'Total'){
                     }else{
                         baseDayHourly[key][context][contextType].items.forEach((adUnitRevContextType)=>{
-                            this.initAdUnit(aggregateRevenue[key][context][contextType].items,adUnitRevContextType.uid);
+                            this.initAdUnitGeneric(aggregateRevenue[key][context][contextType].items,adUnitRevContextType.uid,this.aggregatedRevenueItem);
                             var agg = this.aggregateHelper(['grvRevenue','googleRevenue','grvDirectRevenue','totalRevenue'],adUnitRevContextType)
                             this.applyAggregate(aggregateRevenue[key][context][contextType].items[adUnitRevContextType.uid], agg);
                         })
@@ -501,6 +510,134 @@ getRevenueAggregateByHourOrDate() {
 
 
     return aggregateRevenue;
+}
+
+getAdsImpsTotals(keys,data){
+    var total = 0;
+    keys.forEach((key)=>{
+        const val = data[key];
+        total += val;
+    })
+
+    return total;
+}
+
+
+grvImpressionKeys = [
+    'prop_direct_impressions',
+    'prop_programmatic_high_value_impressions',
+    'prop_programmatic_impressions'
+]
+
+grvDirectImpressionKeys = [
+    'prop_direct_impressions',
+]
+
+googleImpressionKeys = [
+    'google_impressions',
+]
+
+getAdsAggregateTotal(){
+    var baseDataTotal = this.aggregate().byTotal
+
+    const aggregateAds = this.aggregateAdUnitObjectGeneric(this.aggregatedAdsItem);
+
+    
+    
+
+
+    Object.keys(baseDataTotal).forEach((context)=>{
+        if(context === 'Total'){
+            
+            const totalC = baseDataTotal[context].val;
+            aggregateAds['Total'].val.totalImps = totalC.total_impressions
+            aggregateAds['Total'].val.grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalC);
+            aggregateAds['Total'].val.grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalC);
+            aggregateAds['Total'].val.googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalC);
+
+            baseDataTotal.Total.items.forEach((item)=>{
+
+                this.initAdUnitGeneric(aggregateAds.Total.items, item.uid, this.aggregatedAdsItem);
+
+                const totalUnit = baseDataTotal.Total.items.find((item=> item.uid = item.uid));
+
+                aggregateAds.Total.items[item.uid].totalImps = totalUnit.total_impressions
+                aggregateAds.Total.items[item.uid].grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalUnit)
+                aggregateAds.Total.items[item.uid].totalImps = totalUnit.total_impressions
+                aggregateAds.Total.items[item.uid].totalImps = totalUnit.total_impressions
+                // aggregateAds[context].Total.items[item.uid].grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContextUnit);
+                // aggregateAds[context].Total.items[item.uid].grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContextUnit);
+                // aggregateAds[context].Total.items[item.uid].googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContextUnit);
+        
+            })
+
+        }else{
+
+           
+            Object.keys(aggregateAds[context]).forEach((contextType)=>{
+                
+                if(contextType === 'Total'){
+                    const totalContext = baseDataTotal[context].Total.val;
+
+                    aggregateAds[context].Total.val.totalImps = totalContext.total_impressions
+                    aggregateAds[context].Total.val.grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContext);
+                    aggregateAds[context].Total.val.grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContext);
+                    aggregateAds[context].Total.val.googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContext);
+                
+
+                    baseDataTotal[context].Total.items.forEach((item)=>{
+
+                        this.initAdUnitGeneric(aggregateAds[context].Total.items, item.uid, this.aggregatedAdsItem);
+
+                        const totalContextUnit = baseDataTotal[context].Total.items.find((item=> item.uid = item.uid));
+
+                        aggregateAds[context].Total.items[item.uid].totalImps = totalContextUnit.total_impressions
+                        aggregateAds[context].Total.items[item.uid].grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContextUnit);
+                        aggregateAds[context].Total.items[item.uid].grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContextUnit);
+                        aggregateAds[context].Total.items[item.uid].googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContextUnit);
+                
+                    })
+                    
+
+                
+                }else {
+                    const totalContextType = baseDataTotal[context][contextType].val;
+
+                    aggregateAds[context][contextType].val.totalImps = totalContextType.total_impressions
+                    aggregateAds[context][contextType].val.grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContextType);
+                    aggregateAds[context][contextType].val.grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContextType);
+                    aggregateAds[context][contextType].val.googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContextType);
+                
+
+                    baseDataTotal[context][contextType].items.forEach((item)=>{
+
+                        this.initAdUnitGeneric(aggregateAds[context][contextType].items, item.uid, this.aggregatedAdsItem);
+
+                        const totalContextTypeUnit = baseDataTotal[context][contextType].items.find((item=> item.uid = item.uid));
+
+                        aggregateAds[context][contextType].items[item.uid].totalImps = totalContextTypeUnit.total_impressions
+                        aggregateAds[context][contextType].items[item.uid].grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContextTypeUnit);
+                        aggregateAds[context][contextType].items[item.uid].grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContextTypeUnit);
+                        aggregateAds[context][contextType].items[item.uid].googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContextTypeUnit);
+                
+                    })
+
+                }
+
+            })
+        
+        }
+
+
+
+    });
+
+
+
+    // console.log(aggregateRevenue)
+
+    return aggregateAds;
+
 }
 
 revenueData() {

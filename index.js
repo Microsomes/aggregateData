@@ -7,15 +7,15 @@ const fs= require("fs");
 
 const ReportAggregatorBase = require("./helpers/reportHelper");
 
-const ReportingHelper = new ReportAggregatorBase(dailyData);
+const ReportingHelper = new ReportAggregatorBase(data);
 
 // var res = ReportingHelper.aggregateRawTotalsByAdUnit();
 
 // // console.log(res);
 
 
-var res2= ReportingHelper.revenueData()
-// var res2= ReportingHelper.getRevenueAggregateTotal()
+var res2= ReportingHelper.getAdsAggregateTotal()
+var res3 = ReportingHelper.getRevenueAggregateTotal()
 
-fs.writeFileSync("revenue.json",JSON.stringify(res2,null,2),(err)=>{})
+fs.writeFileSync("ads2.json",JSON.stringify(res2,null,2),(err)=>{})
 
