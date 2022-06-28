@@ -644,6 +644,43 @@ getAdsAggregateTotal(){
 
 }
 
+getAdsAggregateHourDate(){
+    var baseDayHourly = this.aggregate().byHourDate;
+
+    const aggregateAds = {};
+
+    Object.keys(baseDayHourly).forEach((key)=>{
+        aggregateAds[key] = this.aggregateAdUnitObjectGeneric(this.aggregatedAdsItem);
+    })
+
+    
+    Object.keys(baseDayHourly).forEach((hour)=>{
+
+        const current = baseDayHourly[hour];
+
+        Object.keys(current).forEach((context)=>{
+            
+            var tcLvl1 = current[context].val;
+
+            if(tcLvl1 === undefined){
+                //AMP OR WEB first parent level 
+               tcLvl1 = current[context].Total.val
+            }else{
+                //context will be total
+
+                this.aggregateeAdsItemProcess(tcLvl1, aggregateAds[hour][context].val)
+
+            }
+
+
+        })
+
+    });
+
+
+    return aggregateAds;
+}
+
 revenueData() {
     return {
         Total: this.getRevenueAggregateTotal(),

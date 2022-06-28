@@ -14,8 +14,8 @@ const ReportingHelper = new ReportAggregatorBase(data);
 // // console.log(res);
 
 
-var res2= ReportingHelper.getAdsAggregateTotal()
-var res3 = ReportingHelper.getRevenueAggregateTotal()
+var res2= ReportingHelper.getAdsAggregateHourDate()
+var res3 = ReportingHelper.aggregate()
 
-fs.writeFileSync("ads2.json",JSON.stringify(res2,null,2),(err)=>{})
+fs.writeFileSync("ads2.json",JSON.stringify(res3,null,2),(err)=>{})
 
