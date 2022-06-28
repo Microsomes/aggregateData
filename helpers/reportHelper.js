@@ -616,11 +616,7 @@ getAdsAggregateTotal(){
                 }else {
                     const totalContextType = baseDataTotal[context][contextType].val;
 
-                    aggregateAds[context][contextType].val.totalImps = totalContextType.total_impressions
-                    aggregateAds[context][contextType].val.grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContextType);
-                    aggregateAds[context][contextType].val.grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContextType);
-                    aggregateAds[context][contextType].val.googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContextType);
-                
+                    this.aggregateeAdsItemProcess(totalContextType, aggregateAds[context][contextType].val)
 
                     baseDataTotal[context][contextType].items.forEach((item)=>{
 
@@ -628,11 +624,8 @@ getAdsAggregateTotal(){
 
                         const totalContextTypeUnit = baseDataTotal[context][contextType].items.find((item=> item.uid = item.uid));
 
-                        aggregateAds[context][contextType].items[item.uid].totalImps = totalContextTypeUnit.total_impressions
-                        aggregateAds[context][contextType].items[item.uid].grvImps = this.getAdsImpsTotals(this.grvImpressionKeys, totalContextTypeUnit);
-                        aggregateAds[context][contextType].items[item.uid].grvDirectImps = this.getAdsImpsTotals(this.grvDirectImpressionKeys, totalContextTypeUnit);
-                        aggregateAds[context][contextType].items[item.uid].googleImps = this.getAdsImpsTotals(this.googleImpressionKeys, totalContextTypeUnit);
-                
+                        this.aggregateeAdsItemProcess(totalContextTypeUnit, aggregateAds[context][contextType].items[item.uid])
+
                     })
 
                 }
@@ -640,8 +633,6 @@ getAdsAggregateTotal(){
             })
         
         }
-
-
 
     });
 

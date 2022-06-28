@@ -167,13 +167,13 @@
     "DISPLAY": {
       "val": {
         "totalImps": 60591,
-        "totalEcpm": 0,
+        "totalEcpm": 1.33,
         "grvImps": 19038,
-        "grvEcpm": 0,
+        "grvEcpm": 1.92,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
+        "grvDirectEcpm": null,
         "googleImps": 41553,
-        "googleEcpm": 0
+        "googleEcpm": 1.06
       },
       "items": {
         "73": {
@@ -193,13 +193,13 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         },
         "74": {
           "name": "Primary leaderboard",
@@ -218,13 +218,13 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         },
         "75": {
           "name": "Primary MPU",
@@ -243,13 +243,13 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         },
         "76": {
           "name": "In-Image",
@@ -268,26 +268,26 @@
             "removed_at": null
           },
           "totalImps": 13437,
-          "totalEcpm": 0,
+          "totalEcpm": 2,
           "grvImps": 4873,
-          "grvEcpm": 0,
+          "grvEcpm": 2.5,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8564,
-          "googleEcpm": 0
+          "googleEcpm": 1.72
         }
       }
     },
     "VIDEO": {
       "val": {
         "totalImps": 354,
-        "totalEcpm": 0,
+        "totalEcpm": 2.33,
         "grvImps": 146,
-        "grvEcpm": 0,
+        "grvEcpm": 2.23,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
+        "grvDirectEcpm": null,
         "googleImps": 208,
-        "googleEcpm": 0
+        "googleEcpm": 2.4
       },
       "items": {
         "80": {
@@ -307,13 +307,13 @@
             "removed_at": null
           },
           "totalImps": 316,
-          "totalEcpm": 0,
+          "totalEcpm": 1.98,
           "grvImps": 140,
-          "grvEcpm": 0,
+          "grvEcpm": 2.25,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 176,
-          "googleEcpm": 0
+          "googleEcpm": 1.76
         },
         "81": {
           "name": "Video Instream CTP",
@@ -332,13 +332,13 @@
             "removed_at": null
           },
           "totalImps": 316,
-          "totalEcpm": 0,
+          "totalEcpm": 1.98,
           "grvImps": 140,
-          "grvEcpm": 0,
+          "grvEcpm": 2.25,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 176,
-          "googleEcpm": 0
+          "googleEcpm": 1.76
         }
       }
     }
@@ -486,13 +486,13 @@
     "DISPLAY": {
       "val": {
         "totalImps": 41929,
-        "totalEcpm": 0,
+        "totalEcpm": 1.43,
         "grvImps": 12681,
-        "grvEcpm": 0,
+        "grvEcpm": 1.96,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
+        "grvDirectEcpm": null,
         "googleImps": 29248,
-        "googleEcpm": 0
+        "googleEcpm": 1.21
       },
       "items": {
         "77": {
@@ -512,13 +512,13 @@
             "removed_at": null
           },
           "totalImps": 12972,
-          "totalEcpm": 0,
+          "totalEcpm": 1.22,
           "grvImps": 4357,
-          "grvEcpm": 0,
+          "grvEcpm": 1.53,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8615,
-          "googleEcpm": 0
+          "googleEcpm": 1.06
         },
         "78": {
           "name": "AMP MPU",
@@ -537,13 +537,13 @@
             "removed_at": null
           },
           "totalImps": 12972,
-          "totalEcpm": 0,
+          "totalEcpm": 1.22,
           "grvImps": 4357,
-          "grvEcpm": 0,
+          "grvEcpm": 1.53,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8615,
-          "googleEcpm": 0
+          "googleEcpm": 1.06
         },
         "79": {
           "name": "AMP Carpet MPU",
@@ -562,13 +562,13 @@
             "removed_at": null
           },
           "totalImps": 12972,
-          "totalEcpm": 0,
+          "totalEcpm": 1.22,
           "grvImps": 4357,
-          "grvEcpm": 0,
+          "grvEcpm": 1.53,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8615,
-          "googleEcpm": 0
+          "googleEcpm": 1.06
         },
         "786": {
           "name": "AMP In-Image",
@@ -587,26 +587,26 @@
             "removed_at": null
           },
           "totalImps": 12972,
-          "totalEcpm": 0,
+          "totalEcpm": 1.22,
           "grvImps": 4357,
-          "grvEcpm": 0,
+          "grvEcpm": 1.53,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 8615,
-          "googleEcpm": 0
+          "googleEcpm": 1.06
         }
       }
     },
     "VIDEO": {
       "val": {
         "totalImps": 803,
-        "totalEcpm": 0,
+        "totalEcpm": 1.62,
         "grvImps": 184,
-        "grvEcpm": 0,
+        "grvEcpm": 1.81,
         "grvDirectImps": 0,
-        "grvDirectEcpm": 0,
+        "grvDirectEcpm": null,
         "googleImps": 619,
-        "googleEcpm": 0
+        "googleEcpm": 1.57
       },
       "items": {
         "84": {
@@ -626,13 +626,13 @@
             "removed_at": null
           },
           "totalImps": 803,
-          "totalEcpm": 0,
+          "totalEcpm": 1.62,
           "grvImps": 184,
-          "grvEcpm": 0,
+          "grvEcpm": 1.81,
           "grvDirectImps": 0,
-          "grvDirectEcpm": 0,
+          "grvDirectEcpm": null,
           "googleImps": 619,
-          "googleEcpm": 0
+          "googleEcpm": 1.57
         }
       }
     }
