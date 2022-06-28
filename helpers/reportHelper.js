@@ -109,6 +109,26 @@ getTotals(revItems){
             }
         })
     })
+
+    if(isNaN(parseInt(total.total_impressions)) ){
+        total.total_impressions= (
+            total.google_impressions+ 
+            total.prop_direct_impressions+
+            total.prop_programmatic_impressions+
+            total.prop_programmatic_high_value_impressions
+        )
+    }
+
+    if(isNaN(parseInt(total.total_revenue)) ){
+        total.total_revenue= (
+            total.google_revenue+
+            total.prop_direct_revenue+
+            total.prop_programmatic_revenue+
+            total.prop_programmatic_high_value_revenue
+        )
+    }
+
+
     return total;
 }
 
@@ -663,15 +683,14 @@ getAdsAggregateHourDate(){
             var tcLvl1 = current[context].val;
 
             if(tcLvl1 === undefined){
-                //AMP OR WEB first parent level 
-               tcLvl1 = current[context].Total.val
+               Object.keys(current[context]).forEach((contextType)=>{
+                    tcLvl1 = current[context][contextType].val
+                    this.aggregateeAdsItemProcess(tcLvl1, aggregateAds[hour][context][contextType].val)
+               })
+
             }else{
-                //context will be total
-
                 this.aggregateeAdsItemProcess(tcLvl1, aggregateAds[hour][context].val)
-
             }
-
 
         })
 
