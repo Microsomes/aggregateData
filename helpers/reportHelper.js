@@ -1,5 +1,3 @@
-
-
 class ReportAggregatorBase {
 
     constructor(reportingData) {
@@ -100,7 +98,7 @@ getGaTotals(gaItems) {
 getTotals(revItems){
 
     var total = this.revenueObject();
-    
+
     Object.keys(this.revenueObject()).forEach((item)=>{
         revItems.forEach((item2)=>{
 
@@ -708,11 +706,8 @@ getAdsAggregateHourDate(){
         aggregateAds[key] = this.aggregateAdUnitObjectGeneric(this.aggregatedAdsItem);
     })
 
-    
     Object.keys(baseDayHourly).forEach((hour)=>{
-
         const current = baseDayHourly[hour];
-
         Object.keys(current).forEach((context)=>{
             
             var tcLvl1 = current[context].val;
@@ -723,11 +718,8 @@ getAdsAggregateHourDate(){
 
                 current[context][contextType].items.forEach((item)=>{
                     var tcLvl2 = current[context][contextType].items.find((item=> item.uid))
-
                     this.initAdUnitGeneric(aggregateAds[hour][context][contextType].items, item.uid, this.aggregatedAdsItem);
                     this.aggregateeAdsItemProcess(tcLvl2, aggregateAds[hour][context][contextType].items[item.uid])
-
-
                 })
 
                 this.aggregateeAdsItemProcess(tcLvl1, aggregateAds[hour][context][contextType].val)
@@ -736,19 +728,33 @@ getAdsAggregateHourDate(){
             }else{
                 this.aggregateeAdsItemProcess(tcLvl1, aggregateAds[hour][context].val)
             }
-
         })
-
     });
 
 
     return aggregateAds;
 }
 
+
+
 revenueData() {
     return {
         Total: this.getRevenueAggregateTotal(),
         HourlyOrDay: this.getRevenueAggregateByHourOrDate()
+    }
+}
+
+adsData() {
+    return {
+        Total: this.getAdsAggregateTotal(),
+        HourlyOrDay: this.getAdsAggregateHourDate()
+    }
+}
+
+allData(){
+    return {
+        revenue: this.revenueData(),
+        ads: this.adsData()
     }
 }
 
