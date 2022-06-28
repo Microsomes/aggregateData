@@ -98,7 +98,9 @@ getGaTotals(gaItems) {
 }
 
 getTotals(revItems){
+
     var total = this.revenueObject();
+    
     Object.keys(this.revenueObject()).forEach((item)=>{
         revItems.forEach((item2)=>{
 
@@ -240,11 +242,44 @@ aggregateRawTotalsByAdUnitHourOrDate(){
                 aggregate[key] = this.aggregateAdUnitObject();
             }
 
-            const currentHour = this.data.report[reportUnitId][key];
+            var currentHour = this.data.report[reportUnitId][key];
+
+            //calculcate total_revenue and total_impressions
+            const getTotalsImpRev = (vals,source)=>{
+                var total_impressions = 0;
+                var total_revenue = 0;
+
+                total_impressions = (
+                    vals.prop_programmatic_impressions+
+                    vals.prop_programmatic_high_value_impressions+
+                    vals.prop_direct_impressions+
+                    vals.google_impressions
+                )
+
+                total_revenue = (
+                    vals.prop_programmatic_revenue+
+                    vals.prop_programmatic_high_value_revenue+
+                    vals.prop_direct_revenue+
+                    vals.google_revenue
+                )
+
+                source.total_impressions = total_impressions
+                source.total_revenue = total_revenue
+                
+            }
+
+            getTotalsImpRev(currentHour,currentHour)
+
+            console.log(currentHour)
+
+
+
+
+
 
             currentHour.uid = reportUnitId;
             
-
+            
             aggregate[key].Total.items.push(currentHour);
 
             aggregate[key].Total.val = this.getTotals(aggregate[key].Total.items);
@@ -684,8 +719,18 @@ getAdsAggregateHourDate(){
 
             if(tcLvl1 === undefined){
                Object.keys(current[context]).forEach((contextType)=>{
-                    tcLvl1 = current[context][contextType].val
-                    this.aggregateeAdsItemProcess(tcLvl1, aggregateAds[hour][context][contextType].val)
+                tcLvl1 = current[context][contextType].val
+
+                current[context][contextType].items.forEach((item)=>{
+                    var tcLvl2 = current[context][contextType].items.find((item=> item.uid))
+
+                    this.initAdUnitGeneric(aggregateAds[hour][context][contextType].items, item.uid, this.aggregatedAdsItem);
+                    this.aggregateeAdsItemProcess(tcLvl2, aggregateAds[hour][context][contextType].items[item.uid])
+
+
+                })
+
+                this.aggregateeAdsItemProcess(tcLvl1, aggregateAds[hour][context][contextType].val)
                })
 
             }else{
