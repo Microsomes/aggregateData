@@ -37,6 +37,17 @@ class ReportAggregatorBase {
         }
     }
 
+    aggregatedFillItem(){
+        return {
+            totalAvailableOmps: 0,
+            totalOmps: 0,
+            unfilledRequests:0,
+            ompImps:0,
+            fill:0,
+            totalOeCpm:0
+        }
+    }
+
     revenueObject = () => {
         return {
             prop_programmatic_impressions: 0,
@@ -885,6 +896,61 @@ getPagesAggregatesByHourOrDate(){
 
 }
 
+aggregateFillItemProcess(dataSource,dest){
+    dest.totalAvailableOmps = (dataSource.val.total_impressions + dataSource.val.unfilled_requests );
+    dest.totalOmps = dataSource.val.total_impressions;
+    dest.ompImps = dataSource.val.total_impressions;
+    dest.unfilledRequests = dataSource.val.unfilled_requests;
+    
+    var totalRev = dataSource.val.total_revenue;
+
+    totalRev-= dataSource.val.prop_direct_revenue;
+
+    dest.totalOeCpm = this.getEcpm(totalRev/1000000, dest.totalAvailableOmps);
+
+    dest.fill = this.round((dest.totalOmps / dest.totalAvailableOmps) * 100,2);
+
+}
+
+aggregateFillTotal() {
+    var baseDataTotal = this.aggregate().byTotal
+
+    const aggregateFill = this.aggregateAdUnitObjectGeneric(this.aggregatedFillItem);
+
+    Object.keys(baseDataTotal).forEach((ParentContext)=>{
+        if(ParentContext == 'Total'){
+            const total = baseDataTotal.Total;
+
+            this.aggregateFillItemProcess(total, aggregateFill[ParentContext].val);
+
+            baseDataTotal[ParentContext].items.forEach((adUnit)=>{
+                this.initAdUnitGeneric(aggregateFill[ParentContext].items, adUnit.uid, this.aggregatedFillItem);
+                // const adUnitContext = this.getContextByUnitId(adUnit.uid);
+
+                this.aggregateFillItemProcess({val:adUnit}, aggregateFill[ParentContext].items[adUnit.uid]);
+
+            })
+
+        }else{
+
+            Object.keys(baseDataTotal[ParentContext]).forEach((contextType)=>{
+                this.aggregateFillItemProcess(baseDataTotal[ParentContext][contextType], aggregateFill[ParentContext][contextType].val);
+
+                const contextItems = baseDataTotal[ParentContext][contextType].items;
+
+                contextItems.forEach((adUnit)=>{
+                    this.initAdUnitGeneric(aggregateFill[ParentContext][contextType].items, adUnit.uid, this.aggregatedFillItem);
+                    this.aggregateFillItemProcess({val:adUnit}, aggregateFill[ParentContext][contextType].items[adUnit.uid]);
+
+                })
+
+            })
+
+        }
+    });
+
+    return aggregateFill
+}
 
 revenueData() {
     return {
@@ -907,10 +973,17 @@ pagesData() {
     }
 }
 
+fillData(){
+    return {
+        Total: this.aggregateFillTotal()
+    }
+}
+
 allData(){
     return {
         revenue: this.revenueData(),
-        ads: this.adsData()
+        ads: this.adsData(),
+        pages: this.pagesData()
     }
 }
 
