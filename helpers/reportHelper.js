@@ -1,3 +1,4 @@
+const fs = require("fs")
 class ReportAggregatorBase {
 
     constructor(reportingData) {
@@ -25,6 +26,15 @@ class ReportAggregatorBase {
           googleImps: 0,
           googleEcpm: 0
         };
+    }
+
+    aggregatedPageItem(){
+        return {
+            rpm:0,
+            pageViews:0,
+            adImpsPerPage:0,
+            totalEstRev:0
+        }
     }
 
     revenueObject = () => {
@@ -267,13 +277,6 @@ aggregateRawTotalsByAdUnitHourOrDate(){
             }
 
             getTotalsImpRev(currentHour,currentHour)
-
-            console.log(currentHour)
-
-
-
-
-
 
             currentHour.uid = reportUnitId;
             
@@ -608,6 +611,14 @@ getEcpm = (revenue,impressions)=>{;
     return this.round((revenue/impressions) *1000,2);
 }
 
+getRPM = (revenue,pageViews) =>{
+    return this.round((revenue/pageViews) * 1000,2)
+}
+
+getAdsImpPerPage = (impression,pageviews) => {
+    return this.round((impression/pageviews),2);
+}
+
 aggregateeAdsItemProcess = (dataSource,dest) => {
 
     dest.totalImps = dataSource.total_impressions
@@ -735,6 +746,118 @@ getAdsAggregateHourDate(){
     return aggregateAds;
 }
 
+aggregatePagesItemProcess(dateSource,dest) {
+    dest.pageViews = dateSource.ga.pageviews;
+
+    dest.rpm = this.getRPM((dateSource.data.total_revenue/1000000), dateSource.ga.pageviews)
+    dest.adImpsPerPage = this.getAdsImpPerPage(dateSource.data.total_impressions, dateSource.ga.pageviews);
+    dest.totalEstRev = this.round((dateSource.data.total_revenue/1000000),2)
+}
+
+getPagesAggregatesByTotal(){
+    var baseDataTotal = this.aggregate().byTotal
+
+    const aggregatePages = this.aggregateAdUnitObjectGeneric(this.aggregatedPageItem);
+
+    Object.keys(baseDataTotal).forEach((context)=>{
+        var lev1= baseDataTotal[context].val;
+
+        if(lev1 !== undefined){
+            // is total parent level
+
+            lev1 = {
+                data:baseDataTotal[context].val,
+                ga:baseDataTotal[context].gaVal
+            }
+
+            this.aggregatePagesItemProcess(lev1, aggregatePages[context].val)
+
+            baseDataTotal[context].items.forEach((adUnitItem)=> {
+                
+                this.initAdUnitGeneric(aggregatePages[context].items, adUnitItem.uid, this.aggregatedPageItem)
+                const totalContextUnit= baseDataTotal[context].items.find(item => item.uid == adUnitItem.uid)
+
+                const adUnitContext = this.getContextByUnitId(adUnitItem.uid);
+
+                this.aggregatePagesItemProcess({
+                    data: totalContextUnit,
+                    ga: baseDataTotal[adUnitContext].Total.gaVal
+                }, aggregatePages[context].items[adUnitItem.uid])
+
+            })
+
+
+        }else{
+
+            Object.keys(baseDataTotal[context]).forEach((contextType)=>{
+                lev1 = {
+                    data:baseDataTotal[context][contextType].val,
+                    ga:baseDataTotal[context][contextType].gaVal,   
+                }
+
+                if(baseDataTotal[context][contextType].gaVal.pageviews === 0){
+                    lev1.ga = baseDataTotal[context].Total.gaVal
+                }
+
+                this.aggregatePagesItemProcess(lev1, aggregatePages[context][contextType].val)
+
+
+                const contextItems = baseDataTotal[context][contextType].items;
+
+                contextItems.forEach((adUnit)=>{
+                    this.initAdUnitGeneric(aggregatePages[context][contextType].items, adUnit.uid, this.aggregatedPageItem);
+                    
+                    const adUnitContext = this.getContextByUnitId(adUnit.uid);
+
+                    this.aggregatePagesItemProcess({
+                        data: adUnit,
+                        ga: baseDataTotal[adUnitContext].Total.gaVal
+                    }, aggregatePages[context][contextType].items[adUnit.uid])
+
+                })
+
+            })
+
+        }
+        
+    })
+
+
+    return aggregatePages;
+    
+}
+
+
+getPagesAggregatesByHourOrDate(){
+    var baseDayHourly = this.aggregate().byHourDate;
+
+    const aggregatePages= {};
+
+    Object.keys(baseDayHourly).forEach((key)=>{
+        aggregatePages[key] = this.aggregateAdUnitObjectGeneric(this.aggregatedPageItem);
+    })
+
+    Object.keys(baseDayHourly).forEach((hour)=>{
+        const current = baseDayHourly[hour];
+
+        Object.keys(current).forEach((ParentContext)=>{
+            if(ParentContext == 'Total'){
+                const totalByDateHour =  current.Total;
+
+            
+                this.aggregatePagesItemProcess({
+                    data: totalByDateHour.val,
+                    ga: totalByDateHour.gaVal
+                }, aggregatePages[hour][ParentContext].val)
+
+            }
+        })
+
+    });
+
+    return aggregatePages;
+
+}
 
 
 revenueData() {
@@ -748,6 +871,13 @@ adsData() {
     return {
         Total: this.getAdsAggregateTotal(),
         HourlyOrDay: this.getAdsAggregateHourDate()
+    }
+}
+
+pagesData() {
+    return {
+        Total: this.getPagesAggregatesByTotal(),
+        HourlyOrDay: this.getPagesAggregatesByHourOrDate()
     }
 }
 
