@@ -843,12 +843,38 @@ getPagesAggregatesByHourOrDate(){
         Object.keys(current).forEach((ParentContext)=>{
             if(ParentContext == 'Total'){
                 const totalByDateHour =  current.Total;
-
-            
                 this.aggregatePagesItemProcess({
                     data: totalByDateHour.val,
                     ga: totalByDateHour.gaVal
                 }, aggregatePages[hour][ParentContext].val)
+
+            }else{
+
+                Object.keys(current[ParentContext]).forEach((contextType)=> {
+                    
+
+                    this.aggregatePagesItemProcess({
+                        data: baseDayHourly[hour][ParentContext][contextType].val,
+                        ga: baseDayHourly[hour][ParentContext].Total.gaVal,
+                    }, aggregatePages[hour][ParentContext][contextType].val
+                    )
+
+                    const contextItems = baseDayHourly[hour][ParentContext][contextType].items;
+
+                    contextItems.forEach((adUnit)=>{
+                        this.initAdUnitGeneric(aggregatePages[hour][ParentContext][contextType].items, adUnit.uid, this.aggregatedPageItem);
+                        const adUnitContext = this.getContextByUnitId(adUnit.uid);
+
+                        this.aggregatePagesItemProcess({
+                            data: adUnit,
+                            ga: baseDayHourly[hour][ParentContext].Total.gaVal,
+                        }, aggregatePages[hour][ParentContext][contextType].items[adUnit.uid]
+                        )
+
+                    });
+
+
+                })
 
             }
         })
