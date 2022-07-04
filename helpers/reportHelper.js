@@ -68,6 +68,8 @@ class ReportAggregatorBase {
             unfilled_requests: 0,
             total_impressions: 0,
             total_revenue:0,
+            viewable_requests:0,
+            measurable_viewable_requests:0
         }
     }
     gaObject = () => {
@@ -124,7 +126,7 @@ getGaTotals(gaItems) {
 }
 
 getTotals(revItems){
-
+    
     var total = this.revenueObject();
 
     Object.keys(this.revenueObject()).forEach((item)=>{

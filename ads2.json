@@ -1,55 +1,823 @@
 {
   "WEB": {
     "Total": {
+      "items": [
+        {
+          "prop_programmatic_impressions": 69958,
+          "prop_programmatic_revenue": 154639075,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 140313,
+          "google_revenue": 227806855,
+          "unfilled_requests": 33247,
+          "measurable_viewable_requests": 199937,
+          "viewable_requests": 162706,
+          "total_impressions": 210271,
+          "total_revenue": 382445930,
+          "uid": "73"
+        },
+        {
+          "prop_programmatic_impressions": 107654,
+          "prop_programmatic_revenue": 109060329,
+          "prop_programmatic_high_value_impressions": 13176,
+          "prop_programmatic_high_value_revenue": 47151440,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 234410,
+          "google_revenue": 133028429,
+          "unfilled_requests": 69625,
+          "measurable_viewable_requests": 333964,
+          "viewable_requests": 305708,
+          "total_impressions": 355240,
+          "total_revenue": 289240198,
+          "uid": "74"
+        },
+        {
+          "prop_programmatic_impressions": 70498,
+          "prop_programmatic_revenue": 141563012,
+          "prop_programmatic_high_value_impressions": 134,
+          "prop_programmatic_high_value_revenue": 505450,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 132342,
+          "google_revenue": 172431448,
+          "unfilled_requests": 31672,
+          "measurable_viewable_requests": 195001,
+          "viewable_requests": 161743,
+          "total_impressions": 202974,
+          "total_revenue": 314499910,
+          "uid": "75"
+        },
+        {
+          "prop_programmatic_impressions": 12437,
+          "prop_programmatic_revenue": 11666457,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 92617,
+          "google_revenue": 45189929,
+          "unfilled_requests": 16230,
+          "measurable_viewable_requests": 104256,
+          "viewable_requests": 87094,
+          "total_impressions": 105054,
+          "total_revenue": 56856386,
+          "uid": "76"
+        },
+        {
+          "prop_programmatic_impressions": 109,
+          "prop_programmatic_revenue": 219495,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 199,
+          "google_revenue": 270500,
+          "unfilled_requests": 198,
+          "measurable_viewable_requests": 308,
+          "viewable_requests": 204,
+          "total_impressions": 308,
+          "total_revenue": 489995,
+          "uid": "80"
+        },
+        {
+          "prop_programmatic_impressions": 29,
+          "prop_programmatic_revenue": 62652,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 194,
+          "google_revenue": 743426,
+          "unfilled_requests": 13,
+          "measurable_viewable_requests": 215,
+          "viewable_requests": 207,
+          "total_impressions": 223,
+          "total_revenue": 806078,
+          "uid": "81"
+        }
+      ],
+      "gaItems": [
+        {
+          "date": "2022-06-27",
+          "website_id": 7,
+          "website_ga_id": 177,
+          "pageviews": 35689,
+          "sessions": 26867,
+          "users": 19706
+        },
+        {
+          "date": "2022-06-28",
+          "website_id": 7,
+          "website_ga_id": 177,
+          "pageviews": 34734,
+          "sessions": 25648,
+          "users": 18845
+        },
+        {
+          "date": "2022-06-29",
+          "website_id": 7,
+          "website_ga_id": 177,
+          "pageviews": 39738,
+          "sessions": 29560,
+          "users": 21076
+        },
+        {
+          "date": "2022-06-30",
+          "website_id": 7,
+          "website_ga_id": 177,
+          "pageviews": 34946,
+          "sessions": 27368,
+          "users": 20476
+        },
+        {
+          "date": "2022-07-01",
+          "website_id": 7,
+          "website_ga_id": 177,
+          "pageviews": 26789,
+          "sessions": 20345,
+          "users": 16214
+        },
+        {
+          "date": "2022-07-02",
+          "website_id": 7,
+          "website_ga_id": 177,
+          "pageviews": 5901,
+          "sessions": 3844,
+          "users": 3132
+        },
+        {
+          "date": "2022-07-03",
+          "website_id": 7,
+          "website_ga_id": 177,
+          "pageviews": 18319,
+          "sessions": 13891,
+          "users": 11069
+        }
+      ],
       "val": {
-        "viewability": 0,
-        "totalEstRevenue": 0
+        "prop_programmatic_impressions": 260685,
+        "prop_programmatic_revenue": 417211020,
+        "prop_programmatic_high_value_impressions": 13310,
+        "prop_programmatic_high_value_revenue": 47656890,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 600075,
+        "google_revenue": 579470587,
+        "unfilled_requests": 150985,
+        "total_impressions": 874070,
+        "total_revenue": 1044338497,
+        "viewable_requests": 717662,
+        "measurable_viewable_requests": 833681
       },
-      "items": {}
+      "gaVal": {
+        "pageviews": 196116,
+        "sessions": 147523,
+        "users": 110518
+      }
     },
     "DISPLAY": {
+      "items": [
+        {
+          "prop_programmatic_impressions": 69958,
+          "prop_programmatic_revenue": 154639075,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 140313,
+          "google_revenue": 227806855,
+          "unfilled_requests": 33247,
+          "measurable_viewable_requests": 199937,
+          "viewable_requests": 162706,
+          "total_impressions": 210271,
+          "total_revenue": 382445930,
+          "uid": "73"
+        },
+        {
+          "prop_programmatic_impressions": 107654,
+          "prop_programmatic_revenue": 109060329,
+          "prop_programmatic_high_value_impressions": 13176,
+          "prop_programmatic_high_value_revenue": 47151440,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 234410,
+          "google_revenue": 133028429,
+          "unfilled_requests": 69625,
+          "measurable_viewable_requests": 333964,
+          "viewable_requests": 305708,
+          "total_impressions": 355240,
+          "total_revenue": 289240198,
+          "uid": "74"
+        },
+        {
+          "prop_programmatic_impressions": 70498,
+          "prop_programmatic_revenue": 141563012,
+          "prop_programmatic_high_value_impressions": 134,
+          "prop_programmatic_high_value_revenue": 505450,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 132342,
+          "google_revenue": 172431448,
+          "unfilled_requests": 31672,
+          "measurable_viewable_requests": 195001,
+          "viewable_requests": 161743,
+          "total_impressions": 202974,
+          "total_revenue": 314499910,
+          "uid": "75"
+        },
+        {
+          "prop_programmatic_impressions": 12437,
+          "prop_programmatic_revenue": 11666457,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 92617,
+          "google_revenue": 45189929,
+          "unfilled_requests": 16230,
+          "measurable_viewable_requests": 104256,
+          "viewable_requests": 87094,
+          "total_impressions": 105054,
+          "total_revenue": 56856386,
+          "uid": "76"
+        }
+      ],
+      "gaItems": [],
       "val": {
-        "viewability": 0,
-        "totalEstRevenue": 0
+        "prop_programmatic_impressions": 260547,
+        "prop_programmatic_revenue": 416928873,
+        "prop_programmatic_high_value_impressions": 13310,
+        "prop_programmatic_high_value_revenue": 47656890,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 599682,
+        "google_revenue": 578456661,
+        "unfilled_requests": 150774,
+        "total_impressions": 873539,
+        "total_revenue": 1043042424,
+        "viewable_requests": 717251,
+        "measurable_viewable_requests": 833158
       },
-      "items": {}
+      "gaVal": {
+        "pageviews": 0,
+        "sessions": 0,
+        "users": 0
+      }
     },
     "VIDEO": {
+      "items": [
+        {
+          "prop_programmatic_impressions": 109,
+          "prop_programmatic_revenue": 219495,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 199,
+          "google_revenue": 270500,
+          "unfilled_requests": 198,
+          "measurable_viewable_requests": 308,
+          "viewable_requests": 204,
+          "total_impressions": 308,
+          "total_revenue": 489995,
+          "uid": "80"
+        },
+        {
+          "prop_programmatic_impressions": 29,
+          "prop_programmatic_revenue": 62652,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 194,
+          "google_revenue": 743426,
+          "unfilled_requests": 13,
+          "measurable_viewable_requests": 215,
+          "viewable_requests": 207,
+          "total_impressions": 223,
+          "total_revenue": 806078,
+          "uid": "81"
+        }
+      ],
+      "gaItems": [],
       "val": {
-        "viewability": 0,
-        "totalEstRevenue": 0
+        "prop_programmatic_impressions": 138,
+        "prop_programmatic_revenue": 282147,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 393,
+        "google_revenue": 1013926,
+        "unfilled_requests": 211,
+        "total_impressions": 531,
+        "total_revenue": 1296073,
+        "viewable_requests": 411,
+        "measurable_viewable_requests": 523
       },
-      "items": {}
+      "gaVal": {
+        "pageviews": 0,
+        "sessions": 0,
+        "users": 0
+      }
     }
   },
   "AMP": {
     "Total": {
+      "items": [
+        {
+          "prop_programmatic_impressions": 47820,
+          "prop_programmatic_revenue": 64380437,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 82406,
+          "google_revenue": 72606783,
+          "unfilled_requests": 27344,
+          "measurable_viewable_requests": 128895,
+          "viewable_requests": 115960,
+          "total_impressions": 130226,
+          "total_revenue": 136987220,
+          "uid": "77"
+        },
+        {
+          "prop_programmatic_impressions": 42441,
+          "prop_programmatic_revenue": 97595281,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 134306,
+          "google_revenue": 156593450,
+          "unfilled_requests": 28399,
+          "measurable_viewable_requests": 173189,
+          "viewable_requests": 110773,
+          "total_impressions": 176747,
+          "total_revenue": 254188731,
+          "uid": "78"
+        },
+        {
+          "prop_programmatic_impressions": 15661,
+          "prop_programmatic_revenue": 40086768,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 55098,
+          "google_revenue": 77054622,
+          "unfilled_requests": 7380,
+          "measurable_viewable_requests": 69048,
+          "viewable_requests": 48219,
+          "total_impressions": 70759,
+          "total_revenue": 117141390,
+          "uid": "79"
+        },
+        {
+          "prop_programmatic_impressions": 113,
+          "prop_programmatic_revenue": 135340,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 458,
+          "google_revenue": 279185,
+          "unfilled_requests": 535,
+          "measurable_viewable_requests": 563,
+          "viewable_requests": 344,
+          "total_impressions": 571,
+          "total_revenue": 414525,
+          "uid": "84"
+        },
+        {
+          "prop_programmatic_impressions": 30633,
+          "prop_programmatic_revenue": 32533960,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 38960,
+          "google_revenue": 19073592,
+          "unfilled_requests": 1831,
+          "measurable_viewable_requests": 69161,
+          "viewable_requests": 52084,
+          "total_impressions": 69593,
+          "total_revenue": 51607552,
+          "uid": "786"
+        }
+      ],
+      "gaItems": [
+        {
+          "date": "2022-06-27",
+          "website_id": 7,
+          "website_ga_id": 178,
+          "pageviews": 21441,
+          "sessions": 18403,
+          "users": 15973
+        },
+        {
+          "date": "2022-06-28",
+          "website_id": 7,
+          "website_ga_id": 178,
+          "pageviews": 15576,
+          "sessions": 13086,
+          "users": 11124
+        },
+        {
+          "date": "2022-06-29",
+          "website_id": 7,
+          "website_ga_id": 178,
+          "pageviews": 19316,
+          "sessions": 15919,
+          "users": 13035
+        },
+        {
+          "date": "2022-06-30",
+          "website_id": 7,
+          "website_ga_id": 178,
+          "pageviews": 19192,
+          "sessions": 16589,
+          "users": 13944
+        },
+        {
+          "date": "2022-07-01",
+          "website_id": 7,
+          "website_ga_id": 178,
+          "pageviews": 20516,
+          "sessions": 17908,
+          "users": 15639
+        },
+        {
+          "date": "2022-07-02",
+          "website_id": 7,
+          "website_ga_id": 178,
+          "pageviews": 7561,
+          "sessions": 6708,
+          "users": 6218
+        },
+        {
+          "date": "2022-07-03",
+          "website_id": 7,
+          "website_ga_id": 178,
+          "pageviews": 7842,
+          "sessions": 6803,
+          "users": 5998
+        }
+      ],
       "val": {
-        "viewability": 0,
-        "totalEstRevenue": 0
+        "prop_programmatic_impressions": 136668,
+        "prop_programmatic_revenue": 234731786,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 311228,
+        "google_revenue": 325607632,
+        "unfilled_requests": 65489,
+        "total_impressions": 447896,
+        "total_revenue": 560339418,
+        "viewable_requests": 327380,
+        "measurable_viewable_requests": 440856
       },
-      "items": {}
+      "gaVal": {
+        "pageviews": 111444,
+        "sessions": 95416,
+        "users": 81931
+      }
     },
     "DISPLAY": {
+      "items": [
+        {
+          "prop_programmatic_impressions": 47820,
+          "prop_programmatic_revenue": 64380437,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 82406,
+          "google_revenue": 72606783,
+          "unfilled_requests": 27344,
+          "measurable_viewable_requests": 128895,
+          "viewable_requests": 115960,
+          "total_impressions": 130226,
+          "total_revenue": 136987220,
+          "uid": "77"
+        },
+        {
+          "prop_programmatic_impressions": 42441,
+          "prop_programmatic_revenue": 97595281,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 134306,
+          "google_revenue": 156593450,
+          "unfilled_requests": 28399,
+          "measurable_viewable_requests": 173189,
+          "viewable_requests": 110773,
+          "total_impressions": 176747,
+          "total_revenue": 254188731,
+          "uid": "78"
+        },
+        {
+          "prop_programmatic_impressions": 15661,
+          "prop_programmatic_revenue": 40086768,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 55098,
+          "google_revenue": 77054622,
+          "unfilled_requests": 7380,
+          "measurable_viewable_requests": 69048,
+          "viewable_requests": 48219,
+          "total_impressions": 70759,
+          "total_revenue": 117141390,
+          "uid": "79"
+        },
+        {
+          "prop_programmatic_impressions": 30633,
+          "prop_programmatic_revenue": 32533960,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 38960,
+          "google_revenue": 19073592,
+          "unfilled_requests": 1831,
+          "measurable_viewable_requests": 69161,
+          "viewable_requests": 52084,
+          "total_impressions": 69593,
+          "total_revenue": 51607552,
+          "uid": "786"
+        }
+      ],
+      "gaItems": [],
       "val": {
-        "viewability": 0,
-        "totalEstRevenue": 0
+        "prop_programmatic_impressions": 136555,
+        "prop_programmatic_revenue": 234596446,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 310770,
+        "google_revenue": 325328447,
+        "unfilled_requests": 64954,
+        "total_impressions": 447325,
+        "total_revenue": 559924893,
+        "viewable_requests": 327036,
+        "measurable_viewable_requests": 440293
       },
-      "items": {}
+      "gaVal": {
+        "pageviews": 0,
+        "sessions": 0,
+        "users": 0
+      }
     },
     "VIDEO": {
+      "items": [
+        {
+          "prop_programmatic_impressions": 113,
+          "prop_programmatic_revenue": 135340,
+          "prop_programmatic_high_value_impressions": 0,
+          "prop_programmatic_high_value_revenue": 0,
+          "prop_direct_impressions": 0,
+          "prop_direct_revenue": 0,
+          "google_impressions": 458,
+          "google_revenue": 279185,
+          "unfilled_requests": 535,
+          "measurable_viewable_requests": 563,
+          "viewable_requests": 344,
+          "total_impressions": 571,
+          "total_revenue": 414525,
+          "uid": "84"
+        }
+      ],
+      "gaItems": [],
       "val": {
-        "viewability": 0,
-        "totalEstRevenue": 0
+        "prop_programmatic_impressions": 113,
+        "prop_programmatic_revenue": 135340,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 458,
+        "google_revenue": 279185,
+        "unfilled_requests": 535,
+        "total_impressions": 571,
+        "total_revenue": 414525,
+        "viewable_requests": 344,
+        "measurable_viewable_requests": 563
       },
-      "items": {}
+      "gaVal": {
+        "pageviews": 0,
+        "sessions": 0,
+        "users": 0
+      }
     }
   },
   "Total": {
+    "items": [
+      {
+        "prop_programmatic_impressions": 69958,
+        "prop_programmatic_revenue": 154639075,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 140313,
+        "google_revenue": 227806855,
+        "unfilled_requests": 33247,
+        "measurable_viewable_requests": 199937,
+        "viewable_requests": 162706,
+        "total_impressions": 210271,
+        "total_revenue": 382445930,
+        "uid": "73"
+      },
+      {
+        "prop_programmatic_impressions": 107654,
+        "prop_programmatic_revenue": 109060329,
+        "prop_programmatic_high_value_impressions": 13176,
+        "prop_programmatic_high_value_revenue": 47151440,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 234410,
+        "google_revenue": 133028429,
+        "unfilled_requests": 69625,
+        "measurable_viewable_requests": 333964,
+        "viewable_requests": 305708,
+        "total_impressions": 355240,
+        "total_revenue": 289240198,
+        "uid": "74"
+      },
+      {
+        "prop_programmatic_impressions": 70498,
+        "prop_programmatic_revenue": 141563012,
+        "prop_programmatic_high_value_impressions": 134,
+        "prop_programmatic_high_value_revenue": 505450,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 132342,
+        "google_revenue": 172431448,
+        "unfilled_requests": 31672,
+        "measurable_viewable_requests": 195001,
+        "viewable_requests": 161743,
+        "total_impressions": 202974,
+        "total_revenue": 314499910,
+        "uid": "75"
+      },
+      {
+        "prop_programmatic_impressions": 12437,
+        "prop_programmatic_revenue": 11666457,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 92617,
+        "google_revenue": 45189929,
+        "unfilled_requests": 16230,
+        "measurable_viewable_requests": 104256,
+        "viewable_requests": 87094,
+        "total_impressions": 105054,
+        "total_revenue": 56856386,
+        "uid": "76"
+      },
+      {
+        "prop_programmatic_impressions": 47820,
+        "prop_programmatic_revenue": 64380437,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 82406,
+        "google_revenue": 72606783,
+        "unfilled_requests": 27344,
+        "measurable_viewable_requests": 128895,
+        "viewable_requests": 115960,
+        "total_impressions": 130226,
+        "total_revenue": 136987220,
+        "uid": "77"
+      },
+      {
+        "prop_programmatic_impressions": 42441,
+        "prop_programmatic_revenue": 97595281,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 134306,
+        "google_revenue": 156593450,
+        "unfilled_requests": 28399,
+        "measurable_viewable_requests": 173189,
+        "viewable_requests": 110773,
+        "total_impressions": 176747,
+        "total_revenue": 254188731,
+        "uid": "78"
+      },
+      {
+        "prop_programmatic_impressions": 15661,
+        "prop_programmatic_revenue": 40086768,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 55098,
+        "google_revenue": 77054622,
+        "unfilled_requests": 7380,
+        "measurable_viewable_requests": 69048,
+        "viewable_requests": 48219,
+        "total_impressions": 70759,
+        "total_revenue": 117141390,
+        "uid": "79"
+      },
+      {
+        "prop_programmatic_impressions": 109,
+        "prop_programmatic_revenue": 219495,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 199,
+        "google_revenue": 270500,
+        "unfilled_requests": 198,
+        "measurable_viewable_requests": 308,
+        "viewable_requests": 204,
+        "total_impressions": 308,
+        "total_revenue": 489995,
+        "uid": "80"
+      },
+      {
+        "prop_programmatic_impressions": 29,
+        "prop_programmatic_revenue": 62652,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 194,
+        "google_revenue": 743426,
+        "unfilled_requests": 13,
+        "measurable_viewable_requests": 215,
+        "viewable_requests": 207,
+        "total_impressions": 223,
+        "total_revenue": 806078,
+        "uid": "81"
+      },
+      {
+        "prop_programmatic_impressions": 113,
+        "prop_programmatic_revenue": 135340,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 458,
+        "google_revenue": 279185,
+        "unfilled_requests": 535,
+        "measurable_viewable_requests": 563,
+        "viewable_requests": 344,
+        "total_impressions": 571,
+        "total_revenue": 414525,
+        "uid": "84"
+      },
+      {
+        "prop_programmatic_impressions": 30633,
+        "prop_programmatic_revenue": 32533960,
+        "prop_programmatic_high_value_impressions": 0,
+        "prop_programmatic_high_value_revenue": 0,
+        "prop_direct_impressions": 0,
+        "prop_direct_revenue": 0,
+        "google_impressions": 38960,
+        "google_revenue": 19073592,
+        "unfilled_requests": 1831,
+        "measurable_viewable_requests": 69161,
+        "viewable_requests": 52084,
+        "total_impressions": 69593,
+        "total_revenue": 51607552,
+        "uid": "786"
+      }
+    ],
+    "gaItems": [],
     "val": {
-      "viewability": 30,
-      "totalEstRevenue": 1604.68
+      "prop_programmatic_impressions": 397353,
+      "prop_programmatic_revenue": 651942806,
+      "prop_programmatic_high_value_impressions": 13310,
+      "prop_programmatic_high_value_revenue": 47656890,
+      "prop_direct_impressions": 0,
+      "prop_direct_revenue": 0,
+      "google_impressions": 911303,
+      "google_revenue": 905078219,
+      "unfilled_requests": 216474,
+      "total_impressions": 1321966,
+      "total_revenue": 1604677915,
+      "viewable_requests": 1045042,
+      "measurable_viewable_requests": 1274537
     },
-    "items": {}
+    "gaVal": {
+      "pageviews": 307560,
+      "sessions": 242939,
+      "users": 192449
+    }
   }
 }
