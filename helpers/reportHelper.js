@@ -999,8 +999,7 @@ getFillAggregateHourDate(){
 
 
 aggregateViewabilityItemProcess(dataSource,dest){
-    dest.viewability= this.round((dataSource.val.viewable_requests/ dataSource.val.measurable_viewable_requests) * 100,2);
-
+    dest.viewability= this.round((dataSource.val.viewable_requests/ dataSource.val.measurable_viewable_requests) * 100,1);
     
     dest.totalEstRevenue = this.round((dataSource.val.total_revenue/1000000),2);
 }
@@ -1028,7 +1027,6 @@ aggregateViewabilityTotal(){
 
                     this.initAdUnitGeneric(aggregateViewability[ParentContext][contextType].items, adUnit.uid, this.aggregatedViewabilityItem);
                     this.aggregateViewabilityItemProcess({val:adUnit}, aggregateViewability[ParentContext][contextType].items[adUnit.uid]);
-
                     
                 })
 
@@ -1040,6 +1038,40 @@ aggregateViewabilityTotal(){
 
 
     return aggregateViewability;
+}
+
+aggregateViewabilityAggregateHourDate() {
+    var baseDayHourly = this.aggregate().byHourDate;
+
+    const aggregateViewability = {}
+
+    Object.keys(baseDayHourly).forEach((key)=>{
+        aggregateViewability[key] = this.aggregateAdUnitObjectGeneric(this.aggregatedViewabilityItem);
+    })
+
+    Object.keys(baseDayHourly).forEach((hour)=>{
+        const current = baseDayHourly[hour];
+
+        Object.keys(current).forEach((ParentContext)=>{
+            if(ParentContext == 'Total'){
+                const totalByDateHour =  current.Total;
+                this.aggregateViewabilityItemProcess({val:totalByDateHour.val}, aggregateViewability[hour][ParentContext].val);
+            }else{
+
+                Object.keys(current[ParentContext]).forEach((innerContext)=>{
+                    const totalByDateHourContext = current[ParentContext][innerContext];
+                    
+                    this.aggregateViewabilityItemProcess({
+                    val: totalByDateHourContext.val,
+                }, aggregateViewability[hour][ParentContext][innerContext].val)
+
+                })
+            }
+        });
+    });
+
+    return aggregateViewability;
+
 }
 
 revenueData() {
@@ -1073,6 +1105,7 @@ fillData(){
 viewabilityData(){
     return {
         Tota: this.aggregateViewabilityTotal(),
+        HourlyOrDay: this.aggregateViewabilityAggregateHourDate()
     }
 }
 
