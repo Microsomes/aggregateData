@@ -7,14 +7,14 @@ const fs= require("fs");
 
 const ReportAggregatorBase = require("./helpers/reportHelper");
 
-const ReportingHelper = new ReportAggregatorBase(data);
+const ReportingHelper = new ReportAggregatorBase(dailyData);
 
 // var res = ReportingHelper.aggregateRawTotalsByAdUnit();
 
 // // console.log(res);
 
 
-var res2= ReportingHelper.aggregateFillTotal()
+var res2= ReportingHelper.aggregateViewabilityTotal()
 var res3 = ReportingHelper.aggregate()
 
 fs.writeFileSync("ads2.json",JSON.stringify(res2,null,2),(err)=>{})

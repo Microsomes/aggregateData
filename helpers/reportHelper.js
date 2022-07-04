@@ -48,6 +48,13 @@ class ReportAggregatorBase {
         }
     }
 
+    aggregatedViewabilityItem(){
+        return {
+            viewability:0,
+            totalEstRevenue:0
+        }
+    }
+
     revenueObject = () => {
         return {
             prop_programmatic_impressions: 0,
@@ -952,6 +959,69 @@ aggregateFillTotal() {
     return aggregateFill
 }
 
+getFillAggregateHourDate(){
+    var baseDayHourly = this.aggregate().byHourDate;
+
+    const aggregateFill = {}
+
+    Object.keys(baseDayHourly).forEach((key)=>{
+        aggregateFill[key] = this.aggregateAdUnitObjectGeneric(this.aggregatedFillItem);
+    })
+
+    Object.keys(baseDayHourly).forEach((hour)=>{
+        const current = baseDayHourly[hour];
+
+        Object.keys(current).forEach((ParentContext)=>{
+            if(ParentContext == 'Total'){
+                const totalByDateHour =  current.Total;
+                this.aggregateFillItemProcess({val:totalByDateHour.val}, aggregateFill[hour][ParentContext].val);
+            }else{
+
+                Object.keys(current[ParentContext]).forEach((innerContext)=>{
+                    const totalByDateHourContext = current[ParentContext][innerContext];
+                    
+                    this.aggregateFillItemProcess({
+                    val: totalByDateHourContext.val,
+                }, aggregateFill[hour][ParentContext][innerContext].val)
+
+                })
+            }
+        });
+    });
+
+
+    return aggregateFill;
+
+
+}
+
+
+aggregateViewabilityItemProcess(dataSource,dest){
+    dest.viewability=30;
+
+    console.log(dataSource.val)
+    
+    dest.totalEstRevenue = this.round((dataSource.val.total_revenue/1000000),2);
+}
+
+aggregateViewabilityTotal(){
+    const aggregateViewability = this.aggregateAdUnitObjectGeneric(this.aggregatedViewabilityItem);
+    
+    var baseDataTotal = this.aggregate().byTotal;
+
+
+    Object.keys(baseDataTotal).forEach((ParentContext)=>{
+        if(ParentContext === "Total"){
+            const total = baseDataTotal.Total;
+            this.aggregateViewabilityItemProcess(total, aggregateViewability[ParentContext].val);
+        }
+    })
+
+
+
+    return aggregateViewability;
+}
+
 revenueData() {
     return {
         Total: this.getRevenueAggregateTotal(),
@@ -975,7 +1045,14 @@ pagesData() {
 
 fillData(){
     return {
-        Total: this.aggregateFillTotal()
+        Total: this.aggregateFillTotal(),
+        HourlyOrDay: this.getFillAggregateHourDate()
+    }
+}
+
+viewabilityData(){
+    return {
+        Tota: this.aggregateViewabilityTotal(),
     }
 }
 
