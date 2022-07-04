@@ -126,7 +126,7 @@ getGaTotals(gaItems) {
 }
 
 getTotals(revItems){
-    
+
     var total = this.revenueObject();
 
     Object.keys(this.revenueObject()).forEach((item)=>{
@@ -999,9 +999,8 @@ getFillAggregateHourDate(){
 
 
 aggregateViewabilityItemProcess(dataSource,dest){
-    dest.viewability=30;
+    dest.viewability= this.round((dataSource.val.viewable_requests/ dataSource.val.measurable_viewable_requests) * 100,2);
 
-    console.log(dataSource.val)
     
     dest.totalEstRevenue = this.round((dataSource.val.total_revenue/1000000),2);
 }
@@ -1016,6 +1015,25 @@ aggregateViewabilityTotal(){
         if(ParentContext === "Total"){
             const total = baseDataTotal.Total;
             this.aggregateViewabilityItemProcess(total, aggregateViewability[ParentContext].val);
+        }else{
+
+            Object.keys(baseDataTotal[ParentContext]).forEach((contextType)=>{
+                
+                const totalContext= baseDataTotal[ParentContext][contextType];
+                this.aggregateViewabilityItemProcess(totalContext, aggregateViewability[ParentContext][contextType].val);
+
+                const contextItems = baseDataTotal[ParentContext][contextType].items;
+
+                contextItems.forEach((adUnit)=>{
+
+                    this.initAdUnitGeneric(aggregateViewability[ParentContext][contextType].items, adUnit.uid, this.aggregatedViewabilityItem);
+                    this.aggregateViewabilityItemProcess({val:adUnit}, aggregateViewability[ParentContext][contextType].items[adUnit.uid]);
+
+                    
+                })
+
+            })
+
         }
     })
 
